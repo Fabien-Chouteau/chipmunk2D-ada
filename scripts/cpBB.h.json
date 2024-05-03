@@ -1,0 +1,46 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_BB_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "structs": [
+    {
+      "name": "cpBB",
+      "description": "/ Chipmunk's axis-aligned 2D bounding box type. (left, bottom, right, top)",
+      "fields": [
+        {
+          "type": "cpFloat l, b, r",
+          "name": "",
+          "description": ""
+        },
+        {
+          "type": "cpFloat ",
+          "name": "l",
+          "description": ""
+        },
+        {
+          "type": "cpFloat ",
+          "name": "b",
+          "description": ""
+        },
+        {
+          "type": "cpFloat ",
+          "name": "t",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+  ]
+}

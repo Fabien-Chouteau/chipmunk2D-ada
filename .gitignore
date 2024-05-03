@@ -1,0 +1,5 @@
+.clang-format
+/obj/
+/lib/
+/alire/
+/config/

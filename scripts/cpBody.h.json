@@ -1,0 +1,823 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpBodyVelocityFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "gravity"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyPositionFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyShapeIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyConstraintIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyArbiterIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpArbiter *",
+          "name": "arbiter"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpBodyAlloc",
+      "description": "",
+      "returnType": "cpBody*"
+    },
+    {
+      "name": "cpBodyInit",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "mass"
+        },
+        {
+          "type": "cpFloat",
+          "name": "moment"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyNew",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "mass"
+        },
+        {
+          "type": "cpFloat",
+          "name": "moment"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyNewKinematic",
+      "description": "",
+      "returnType": "cpBody*"
+    },
+    {
+      "name": "cpBodyNewStatic",
+      "description": "",
+      "returnType": "cpBody*"
+    },
+    {
+      "name": "cpBodyDestroy",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyActivate",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyActivateStatic",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpShape *",
+          "name": "filter"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySleep",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySleepWithGroup",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBody *",
+          "name": "group"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyIsSleeping",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetType",
+      "description": "",
+      "returnType": "cpBodyType",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetType",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBodyType",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetSpace",
+      "description": "",
+      "returnType": "cpSpace*",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetMass",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetMass",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "m"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetMoment",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetMoment",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "i"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetPosition",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetPosition",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "pos"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetCenterOfGravity",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetCenterOfGravity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "cog"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetVelocity",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetVelocity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "velocity"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetForce",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetForce",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "force"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetAngle",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetAngle",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "a"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetAngularVelocity",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetAngularVelocity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "angularVelocity"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetTorque",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetTorque",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "torque"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetRotation",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetUserData",
+      "description": "",
+      "returnType": "cpDataPointer",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetUserData",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetVelocityUpdateFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBodyVelocityFunc",
+          "name": "velocityFunc"
+        }
+      ]
+    },
+    {
+      "name": "cpBodySetPositionUpdateFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBodyPositionFunc",
+          "name": "positionFunc"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyUpdateVelocity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "gravity"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyUpdatePosition",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyLocalToWorld",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "const cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyWorldToLocal",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "const cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyApplyForceAtWorldPoint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "force"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyApplyForceAtLocalPoint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "force"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyApplyImpulseAtWorldPoint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "impulse"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyApplyImpulseAtLocalPoint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "impulse"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetVelocityAtWorldPoint",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyGetVelocityAtLocalPoint",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyKineticEnergy",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyEachShape",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBodyShapeIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyEachConstraint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBodyConstraintIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpBodyEachArbiter",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBodyArbiterIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    }
+  ]
+}

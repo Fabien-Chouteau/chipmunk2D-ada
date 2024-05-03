@@ -1,0 +1,698 @@
+{
+  "defines": [
+  ],
+  "structs": [
+    {
+      "name": "cpPointQueryInfo",
+      "description": "/ Point query info struct.",
+      "fields": [
+        {
+          "type": "const cpShape *",
+          "name": "shape",
+          "description": ""
+        },
+        {
+          "type": "cpVect",
+          "name": "point",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "distance",
+          "description": ""
+        },
+        {
+          "type": "cpVect",
+          "name": "gradient",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentQueryInfo",
+      "description": "/ Segment query info struct.",
+      "fields": [
+        {
+          "type": "const cpShape *",
+          "name": "shape",
+          "description": ""
+        },
+        {
+          "type": "cpVect",
+          "name": "point",
+          "description": ""
+        },
+        {
+          "type": "cpVect",
+          "name": "normal",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "alpha",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cpShapeFilter",
+      "description": "/ Fast collision filtering type that is used to determine if two objects collide before calling collision or query callbacks.",
+      "fields": [
+        {
+          "type": "cpGroup",
+          "name": "group",
+          "description": ""
+        },
+        {
+          "type": "cpBitmask",
+          "name": "categories",
+          "description": ""
+        },
+        {
+          "type": "cpBitmask",
+          "name": "mask",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpShapeDestroy",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeCacheBB",
+      "description": "",
+      "returnType": "cpBB",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeUpdate",
+      "description": "",
+      "returnType": "cpBB",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpTransform",
+          "name": "transform"
+        }
+      ]
+    },
+    {
+      "name": "cpShapePointQuery",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "p"
+        },
+        {
+          "type": "cpPointQueryInfo *",
+          "name": "out"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSegmentQuery",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpSegmentQueryInfo *",
+          "name": "info"
+        }
+      ]
+    },
+    {
+      "name": "cpShapesCollide",
+      "description": "",
+      "returnType": "cpContactPointSet",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "a"
+        },
+        {
+          "type": "const cpShape *",
+          "name": "b"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetSpace",
+      "description": "",
+      "returnType": "cpSpace*",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetBody",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetBody",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetMass",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetMass",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "mass"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetDensity",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetDensity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "density"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetMoment",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetArea",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetCenterOfGravity",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetBB",
+      "description": "",
+      "returnType": "cpBB",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetSensor",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetSensor",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpBool",
+          "name": "sensor"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetElasticity",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetElasticity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "elasticity"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetFriction",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetFriction",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "friction"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetSurfaceVelocity",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetSurfaceVelocity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "surfaceVelocity"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetUserData",
+      "description": "",
+      "returnType": "cpDataPointer",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetUserData",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetCollisionType",
+      "description": "",
+      "returnType": "cpCollisionType",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetCollisionType",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpCollisionType",
+          "name": "collisionType"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeGetFilter",
+      "description": "",
+      "returnType": "cpShapeFilter",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSetFilter",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpShapeFilter",
+          "name": "filter"
+        }
+      ]
+    },
+    {
+      "name": "cpCircleShapeAlloc",
+      "description": "",
+      "returnType": "cpCircleShape*"
+    },
+    {
+      "name": "cpCircleShapeInit",
+      "description": "",
+      "returnType": "cpCircleShape*",
+      "params": [
+        {
+          "type": "cpCircleShape *",
+          "name": "circle"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpVect",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "cpCircleShapeNew",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpVect",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "cpCircleShapeGetOffset",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpCircleShapeGetRadius",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeAlloc",
+      "description": "",
+      "returnType": "cpSegmentShape*"
+    },
+    {
+      "name": "cpSegmentShapeInit",
+      "description": "",
+      "returnType": "cpSegmentShape*",
+      "params": [
+        {
+          "type": "cpSegmentShape *",
+          "name": "seg"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeNew",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeSetNeighbors",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "prev"
+        },
+        {
+          "type": "cpVect",
+          "name": "next"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeGetA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeGetB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeGetNormal",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeGetRadius",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    }
+  ]
+}

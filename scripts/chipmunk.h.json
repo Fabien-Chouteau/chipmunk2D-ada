@@ -1,0 +1,334 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_EXPORT",
+      "type": "UNKNOWN",
+      "value": "__declspec(dllexport)",
+      "description": ""
+    },
+    {
+      "name": "cpAssertSoft(__condition__, ...)",
+      "type": "MACRO",
+      "value": "if(!(__condition__)){cpMessage(#__condition__, __FILE__, __LINE__, 1, 0, __VA_ARGS__); abort();}",
+      "description": ""
+    },
+    {
+      "name": "cpAssertWarn(__condition__, ...)",
+      "type": "MACRO",
+      "value": "if(!(__condition__)) cpMessage(#__condition__, __FILE__, __LINE__, 0, 0, __VA_ARGS__)",
+      "description": ""
+    },
+    {
+      "name": "cpAssertHard(__condition__, ...)",
+      "type": "MACRO",
+      "value": "if(!(__condition__)){cpMessage(#__condition__, __FILE__, __LINE__, 1, 1, __VA_ARGS__); abort();}",
+      "description": ""
+    },
+    {
+      "name": "CP_BUFFER_BYTES",
+      "type": "INT_MATH",
+      "value": "(32*1024)",
+      "description": ""
+    },
+    {
+      "name": "cpcalloc",
+      "type": "UNKNOWN",
+      "value": "calloc",
+      "description": ""
+    },
+    {
+      "name": "cprealloc",
+      "type": "UNKNOWN",
+      "value": "realloc",
+      "description": ""
+    },
+    {
+      "name": "cpfree",
+      "type": "UNKNOWN",
+      "value": "free",
+      "description": ""
+    },
+    {
+      "name": "CP_VERSION_MAJOR",
+      "type": "INT",
+      "value": 7,
+      "description": ""
+    },
+    {
+      "name": "CP_VERSION_MINOR",
+      "type": "INT",
+      "value": 0,
+      "description": ""
+    },
+    {
+      "name": "CP_VERSION_RELEASE",
+      "type": "INT",
+      "value": 3,
+      "description": ""
+    },
+    {
+      "name": "CP_CONVEX_HULL(__count__, __verts__, __count_var__, __verts_var_",
+      "type": "MACRO",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpMessage",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "const char *",
+          "name": "condition"
+        },
+        {
+          "type": "const char *",
+          "name": "file"
+        },
+        {
+          "type": "int",
+          "name": "line"
+        },
+        {
+          "type": "int",
+          "name": "isError"
+        },
+        {
+          "type": "int",
+          "name": "isHardError"
+        },
+        {
+          "type": "const char *",
+          "name": "message"
+        },
+        {
+          "type": "...",
+          "name": "args"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "description": "",
+      "returnType": ""
+    },
+    {
+      "name": "cpMomentForCircle",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "m"
+        },
+        {
+          "type": "cpFloat",
+          "name": "r1"
+        },
+        {
+          "type": "cpFloat",
+          "name": "r2"
+        },
+        {
+          "type": "cpVect",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "cpAreaForCircle",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "r1"
+        },
+        {
+          "type": "cpFloat",
+          "name": "r2"
+        }
+      ]
+    },
+    {
+      "name": "cpMomentForSegment",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "m"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpAreaForSegment",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpMomentForPoly",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "m"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpVect",
+          "name": "offset"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpAreaForPoly",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpCentroidForPoly",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        }
+      ]
+    },
+    {
+      "name": "cpMomentForBox",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "m"
+        },
+        {
+          "type": "cpFloat",
+          "name": "width"
+        },
+        {
+          "type": "cpFloat",
+          "name": "height"
+        }
+      ]
+    },
+    {
+      "name": "cpMomentForBox2",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "m"
+        },
+        {
+          "type": "cpBB",
+          "name": "box"
+        }
+      ]
+    },
+    {
+      "name": "cpConvexHull",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpVect *",
+          "name": "result"
+        },
+        {
+          "type": "int *",
+          "name": "first"
+        },
+        {
+          "type": "cpFloat",
+          "name": "tol"
+        }
+      ]
+    }
+  ]
+}

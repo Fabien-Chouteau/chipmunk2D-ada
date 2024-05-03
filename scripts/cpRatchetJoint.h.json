@@ -1,0 +1,158 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsRatchetJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointAlloc",
+      "description": "",
+      "returnType": "cpRatchetJoint*"
+    },
+    {
+      "name": "cpRatchetJointInit",
+      "description": "",
+      "returnType": "cpRatchetJoint*",
+      "params": [
+        {
+          "type": "cpRatchetJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "phase"
+        },
+        {
+          "type": "cpFloat",
+          "name": "ratchet"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "phase"
+        },
+        {
+          "type": "cpFloat",
+          "name": "ratchet"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointGetAngle",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointSetAngle",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "angle"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointGetPhase",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointSetPhase",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "phase"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointGetRatchet",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRatchetJointSetRatchet",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "ratchet"
+        }
+      ]
+    }
+  ]
+}

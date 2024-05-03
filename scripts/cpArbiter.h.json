@@ -1,0 +1,442 @@
+{
+  "defines": [
+    {
+      "name": "CP_MAX_CONTACTS_PER_ARBITER",
+      "type": "INT",
+      "value": 2,
+      "description": ""
+    },
+    {
+      "name": "CP_ARBITER_GET_SHAPES(__arb__, __a__, __b__)",
+      "type": "MACRO",
+      "value": "cpShape *__a__, *__b__; cpArbiterGetShapes(__arb__, &__a__, &__b__);",
+      "description": ""
+    },
+    {
+      "name": "CP_ARBITER_GET_BODIES(__arb__, __a__, __b__)",
+      "type": "MACRO",
+      "value": "cpBody *__a__, *__b__; cpArbiterGetBodies(__arb__, &__a__, &__b__);",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpArbiterGetRestitution",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterSetRestitution",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restitution"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetFriction",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterSetFriction",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpFloat",
+          "name": "friction"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetSurfaceVelocity",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterSetSurfaceVelocity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpVect",
+          "name": "vr"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetUserData",
+      "description": "",
+      "returnType": "cpDataPointer",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterSetUserData",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterTotalImpulse",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterTotalKE",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterIgnore",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetShapes",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpShape **",
+          "name": "a"
+        },
+        {
+          "type": "cpShape **",
+          "name": "b"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetBodies",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpBody **",
+          "name": "a"
+        },
+        {
+          "type": "cpBody **",
+          "name": "b"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetContactPointSet",
+      "description": "",
+      "returnType": "cpContactPointSet",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterSetContactPointSet",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpContactPointSet *",
+          "name": "set"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterIsFirstContact",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterIsRemoval",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetCount",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetNormal",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetPointA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "int",
+          "name": "i"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetPointB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "int",
+          "name": "i"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterGetDepth",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "int",
+          "name": "i"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardBeginA",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardBeginB",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardPreSolveA",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardPreSolveB",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardPostSolveA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardPostSolveB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardSeparateA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpArbiterCallWildcardSeparateB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    }
+  ]
+}

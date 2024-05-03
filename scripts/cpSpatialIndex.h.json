@@ -1,0 +1,514 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpSpatialIndexBBFunc",
+      "description": "",
+      "returnType": "cpBB",
+      "params": [
+        {
+          "type": "void *",
+          "name": "obj"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexQueryFunc",
+      "description": "",
+      "returnType": "cpCollisionID",
+      "params": [
+        {
+          "type": "void *",
+          "name": "obj1"
+        },
+        {
+          "type": "void *",
+          "name": "obj2"
+        },
+        {
+          "type": "cpCollisionID",
+          "name": "id"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexSegmentQueryFunc",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "void *",
+          "name": "obj1"
+        },
+        {
+          "type": "void *",
+          "name": "obj2"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpBBTreeVelocityFunc",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "void *",
+          "name": "obj"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexDestroyImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexCountImpl",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexEachImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "cpSpatialIndexIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexContainsImpl",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "cpHashValue",
+          "name": "hashid"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexInsertImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "cpHashValue",
+          "name": "hashid"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexRemoveImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "cpHashValue",
+          "name": "hashid"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexReindexImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexReindexObjectImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "cpHashValue",
+          "name": "hashid"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexReindexQueryImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "cpSpatialIndexQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexQueryImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "cpBB",
+          "name": "bb"
+        },
+        {
+          "type": "cpSpatialIndexQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexSegmentQueryImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "void *",
+          "name": "obj"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "t_exit"
+        },
+        {
+          "type": "cpSpatialIndexSegmentQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpSpaceHashAlloc",
+      "description": "",
+      "returnType": "cpSpaceHash*"
+    },
+    {
+      "name": "cpSpaceHashInit",
+      "description": "",
+      "returnType": "cpSpatialIndex*",
+      "params": [
+        {
+          "type": "cpSpaceHash *",
+          "name": "hash"
+        },
+        {
+          "type": "cpFloat",
+          "name": "celldim"
+        },
+        {
+          "type": "int",
+          "name": "numcells"
+        },
+        {
+          "type": "cpSpatialIndexBBFunc",
+          "name": "bbfunc"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceHashNew",
+      "description": "",
+      "returnType": "cpSpatialIndex*",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "celldim"
+        },
+        {
+          "type": "int",
+          "name": "cells"
+        },
+        {
+          "type": "cpSpatialIndexBBFunc",
+          "name": "bbfunc"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceHashResize",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpaceHash *",
+          "name": "hash"
+        },
+        {
+          "type": "cpFloat",
+          "name": "celldim"
+        },
+        {
+          "type": "int",
+          "name": "numcells"
+        }
+      ]
+    },
+    {
+      "name": "cpBBTreeAlloc",
+      "description": "",
+      "returnType": "cpBBTree*"
+    },
+    {
+      "name": "cpBBTreeInit",
+      "description": "",
+      "returnType": "cpSpatialIndex*",
+      "params": [
+        {
+          "type": "cpBBTree *",
+          "name": "tree"
+        },
+        {
+          "type": "cpSpatialIndexBBFunc",
+          "name": "bbfunc"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        }
+      ]
+    },
+    {
+      "name": "cpBBTreeNew",
+      "description": "",
+      "returnType": "cpSpatialIndex*",
+      "params": [
+        {
+          "type": "cpSpatialIndexBBFunc",
+          "name": "bbfunc"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        }
+      ]
+    },
+    {
+      "name": "cpBBTreeOptimize",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cpBBTreeSetVelocityFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        },
+        {
+          "type": "cpBBTreeVelocityFunc",
+          "name": "func"
+        }
+      ]
+    },
+    {
+      "name": "cpSweep1DAlloc",
+      "description": "",
+      "returnType": "cpSweep1D*"
+    },
+    {
+      "name": "cpSweep1DInit",
+      "description": "",
+      "returnType": "cpSpatialIndex*",
+      "params": [
+        {
+          "type": "cpSweep1D *",
+          "name": "sweep"
+        },
+        {
+          "type": "cpSpatialIndexBBFunc",
+          "name": "bbfunc"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        }
+      ]
+    },
+    {
+      "name": "cpSweep1DNew",
+      "description": "",
+      "returnType": "cpSpatialIndex*",
+      "params": [
+        {
+          "type": "cpSpatialIndexBBFunc",
+          "name": "bbfunc"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cpSpatialIndexCollideStatic",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpatialIndex *",
+          "name": "dynamicIndex"
+        },
+        {
+          "type": "cpSpatialIndex *",
+          "name": "staticIndex"
+        },
+        {
+          "type": "cpSpatialIndexQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    }
+  ]
+}

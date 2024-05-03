@@ -1,0 +1,132 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsGearJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGearJointAlloc",
+      "description": "",
+      "returnType": "cpGearJoint*"
+    },
+    {
+      "name": "cpGearJointInit",
+      "description": "",
+      "returnType": "cpGearJoint*",
+      "params": [
+        {
+          "type": "cpGearJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "phase"
+        },
+        {
+          "type": "cpFloat",
+          "name": "ratio"
+        }
+      ]
+    },
+    {
+      "name": "cpGearJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "phase"
+        },
+        {
+          "type": "cpFloat",
+          "name": "ratio"
+        }
+      ]
+    },
+    {
+      "name": "cpGearJointGetPhase",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGearJointSetPhase",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "phase"
+        }
+      ]
+    },
+    {
+      "name": "cpGearJointGetRatio",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGearJointSetRatio",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "ratio"
+        }
+      ]
+    }
+  ]
+}

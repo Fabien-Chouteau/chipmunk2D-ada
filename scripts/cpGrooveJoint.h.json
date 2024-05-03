@@ -1,0 +1,166 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsGrooveJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointAlloc",
+      "description": "",
+      "returnType": "cpGrooveJoint*"
+    },
+    {
+      "name": "cpGrooveJointInit",
+      "description": "",
+      "returnType": "cpGrooveJoint*",
+      "params": [
+        {
+          "type": "cpGrooveJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "groove_a"
+        },
+        {
+          "type": "cpVect",
+          "name": "groove_b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "groove_a"
+        },
+        {
+          "type": "cpVect",
+          "name": "groove_b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointGetGrooveA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointSetGrooveA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "grooveA"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointGetGrooveB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointSetGrooveB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "grooveB"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointGetAnchorB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpGrooveJointSetAnchorB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    }
+  ]
+}

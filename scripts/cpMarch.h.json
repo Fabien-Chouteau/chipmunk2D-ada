@@ -1,0 +1,58 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpMarchSampleFunc",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "point"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpMarchSegmentFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "v0"
+        },
+        {
+          "type": "cpVect",
+          "name": "v1"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpMarchSoft",
+      "description": "",
+      "returnType": "void"
+    },
+    {
+      "name": "cpMarchHard",
+      "description": "",
+      "returnType": "void"
+    }
+  ]
+}

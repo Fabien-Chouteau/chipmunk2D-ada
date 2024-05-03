@@ -1,0 +1,200 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsSlideJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointAlloc",
+      "description": "",
+      "returnType": "cpSlideJoint*"
+    },
+    {
+      "name": "cpSlideJointInit",
+      "description": "",
+      "returnType": "cpSlideJoint*",
+      "params": [
+        {
+          "type": "cpSlideJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        },
+        {
+          "type": "cpFloat",
+          "name": "min"
+        },
+        {
+          "type": "cpFloat",
+          "name": "max"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        },
+        {
+          "type": "cpFloat",
+          "name": "min"
+        },
+        {
+          "type": "cpFloat",
+          "name": "max"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointGetAnchorA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointSetAnchorA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointGetAnchorB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointSetAnchorB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointGetMin",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointSetMin",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "min"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointGetMax",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSlideJointSetMax",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "max"
+        }
+      ]
+    }
+  ]
+}

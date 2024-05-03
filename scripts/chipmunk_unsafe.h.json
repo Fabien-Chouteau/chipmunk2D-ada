@@ -1,0 +1,141 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_UNSAFE_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpCircleShapeSetRadius",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpCircleShapeSetOffset",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "offset"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeSetEndpoints",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        }
+      ]
+    },
+    {
+      "name": "cpSegmentShapeSetRadius",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeSetVerts",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpTransform",
+          "name": "transform"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeSetVertsRaw",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "cpVect *",
+          "name": "verts"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeSetRadius",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    }
+  ]
+}

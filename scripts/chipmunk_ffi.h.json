@@ -1,0 +1,20 @@
+{
+  "defines": [
+    {
+      "name": "MAKE_REF(name)",
+      "type": "MACRO",
+      "value": "CP_EXPORT decltype(name) *_##name = name",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpDampedRotarySpringTorqueFunc",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "struct cpConstraint *",
+          "name": "spring"
+        },
+        {
+          "type": "cpFloat",
+          "name": "relativeAngle"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsDampedRotarySpring",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringAlloc",
+      "description": "",
+      "returnType": "cpDampedRotarySpring*"
+    },
+    {
+      "name": "cpDampedRotarySpringInit",
+      "description": "",
+      "returnType": "cpDampedRotarySpring*",
+      "params": [
+        {
+          "type": "cpDampedRotarySpring *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restAngle"
+        },
+        {
+          "type": "cpFloat",
+          "name": "stiffness"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restAngle"
+        },
+        {
+          "type": "cpFloat",
+          "name": "stiffness"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringGetRestAngle",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringSetRestAngle",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restAngle"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringGetStiffness",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringSetStiffness",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "stiffness"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringGetDamping",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringSetDamping",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringGetSpringTorqueFunc",
+      "description": "",
+      "returnType": "cpDampedRotarySpringTorqueFunc",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedRotarySpringSetSpringTorqueFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpDampedRotarySpringTorqueFunc",
+          "name": "springTorqueFunc"
+        }
+      ]
+    }
+  ]
+}

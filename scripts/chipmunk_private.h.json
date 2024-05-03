@@ -1,0 +1,128 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_PRIVATE_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_HASH_COEF",
+      "type": "UNKNOWN",
+      "value": "(3344921057ul)",
+      "description": ""
+    },
+    {
+      "name": "CP_HASH_PAIR(A, B)",
+      "type": "MACRO",
+      "value": "((cpHashValue)(A)*CP_HASH_COEF ^ (cpHashValue)(B)*CP_HASH_COEF)",
+      "description": ""
+    },
+    {
+      "name": "MAGIC_EPSILON",
+      "type": "INT",
+      "value": 1e-5,
+      "description": ""
+    },
+    {
+      "name": "cpAssertSpaceUnlocked(space)",
+      "type": "MACRO",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_BODY_FOREACH_CONSTRAINT(bdy, var)\",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_BODY_FOREACH_ARBITER(bdy, var)\",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_BODY_FOREACH_SHAPE(body, var)\",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_BODY_FOREACH_COMPONENT(root, var)\",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpHashSetEqlFunc",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const void *",
+          "name": "ptr"
+        },
+        {
+          "type": "const void *",
+          "name": "elt"
+        }
+      ]
+    },
+    {
+      "name": "cpHashSetTransFunc",
+      "description": "",
+      "returnType": "void *",
+      "params": [
+        {
+          "type": "const void *",
+          "name": "ptr"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpHashSetIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "void *",
+          "name": "elt"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpHashSetFilterFunc",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "void *",
+          "name": "elt"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    }
+  ],
+  "functions": [
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsRotaryLimitJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRotaryLimitJointAlloc",
+      "description": "",
+      "returnType": "cpRotaryLimitJoint*"
+    },
+    {
+      "name": "cpRotaryLimitJointInit",
+      "description": "",
+      "returnType": "cpRotaryLimitJoint*",
+      "params": [
+        {
+          "type": "cpRotaryLimitJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "min"
+        },
+        {
+          "type": "cpFloat",
+          "name": "max"
+        }
+      ]
+    },
+    {
+      "name": "cpRotaryLimitJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "min"
+        },
+        {
+          "type": "cpFloat",
+          "name": "max"
+        }
+      ]
+    },
+    {
+      "name": "cpRotaryLimitJointGetMin",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRotaryLimitJointSetMin",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "min"
+        }
+      ]
+    },
+    {
+      "name": "cpRotaryLimitJointGetMax",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpRotaryLimitJointSetMax",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "max"
+        }
+      ]
+    }
+  ]
+}

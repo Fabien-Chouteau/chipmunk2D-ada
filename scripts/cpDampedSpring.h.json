@@ -1,0 +1,275 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpDampedSpringForceFunc",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "spring"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dist"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsDampedSpring",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringAlloc",
+      "description": "",
+      "returnType": "cpDampedSpring*"
+    },
+    {
+      "name": "cpDampedSpringInit",
+      "description": "",
+      "returnType": "cpDampedSpring*",
+      "params": [
+        {
+          "type": "cpDampedSpring *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restLength"
+        },
+        {
+          "type": "cpFloat",
+          "name": "stiffness"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restLength"
+        },
+        {
+          "type": "cpFloat",
+          "name": "stiffness"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringGetAnchorA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringSetAnchorA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringGetAnchorB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringSetAnchorB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringGetRestLength",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringSetRestLength",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "restLength"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringGetStiffness",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringSetStiffness",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "stiffness"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringGetDamping",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringSetDamping",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringGetSpringForceFunc",
+      "description": "",
+      "returnType": "cpDampedSpringForceFunc",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpDampedSpringSetSpringForceFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpDampedSpringForceFunc",
+          "name": "springForceFunc"
+        }
+      ]
+    }
+  ]
+}

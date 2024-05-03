@@ -1,0 +1,352 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_TYPES_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_USE_CGTYPES",
+      "type": "INT",
+      "value": 1,
+      "description": ""
+    },
+    {
+      "name": "CP_USE_DOUBLES",
+      "type": "INT",
+      "value": 1,
+      "description": ""
+    },
+    {
+      "name": "cpfsqrt",
+      "type": "UNKNOWN",
+      "value": "sqrt",
+      "description": ""
+    },
+    {
+      "name": "cpfsin",
+      "type": "UNKNOWN",
+      "value": "sin",
+      "description": ""
+    },
+    {
+      "name": "cpfcos",
+      "type": "UNKNOWN",
+      "value": "cos",
+      "description": ""
+    },
+    {
+      "name": "cpfacos",
+      "type": "UNKNOWN",
+      "value": "acos",
+      "description": ""
+    },
+    {
+      "name": "cpfatan2",
+      "type": "UNKNOWN",
+      "value": "atan2",
+      "description": ""
+    },
+    {
+      "name": "cpfmod",
+      "type": "UNKNOWN",
+      "value": "fmod",
+      "description": ""
+    },
+    {
+      "name": "cpfexp",
+      "type": "UNKNOWN",
+      "value": "exp",
+      "description": ""
+    },
+    {
+      "name": "cpfpow",
+      "type": "UNKNOWN",
+      "value": "pow",
+      "description": ""
+    },
+    {
+      "name": "cpffloor",
+      "type": "UNKNOWN",
+      "value": "floor",
+      "description": ""
+    },
+    {
+      "name": "cpfceil",
+      "type": "UNKNOWN",
+      "value": "ceil",
+      "description": ""
+    },
+    {
+      "name": "CPFLOAT_MIN",
+      "type": "UNKNOWN",
+      "value": "DBL_MIN",
+      "description": ""
+    },
+    {
+      "name": "INFINITY",
+      "type": "UNKNOWN",
+      "value": "(INFINITY_HACK.Value)",
+      "description": ""
+    },
+    {
+      "name": "CP_PI",
+      "type": "UNKNOWN",
+      "value": "((cpFloat)3.14159265358979323846264338327950288)",
+      "description": ""
+    },
+    {
+      "name": "cpTrue",
+      "type": "INT",
+      "value": 1,
+      "description": ""
+    },
+    {
+      "name": "cpFalse",
+      "type": "INT",
+      "value": 0,
+      "description": ""
+    },
+    {
+      "name": "CP_NO_GROUP",
+      "type": "UNKNOWN",
+      "value": "((cpGroup)0)",
+      "description": ""
+    },
+    {
+      "name": "CP_ALL_CATEGORIES",
+      "type": "UNKNOWN",
+      "value": "(~(cpBitmask)0)",
+      "description": ""
+    },
+    {
+      "name": "CP_WILDCARD_COLLISION_TYPE",
+      "type": "UNKNOWN",
+      "value": "(~(cpCollisionType)0)",
+      "description": ""
+    }
+  ],
+  "structs": [
+    {
+      "name": "cpVect",
+      "description": "/ @addtogroup cpVect",
+      "fields": [
+        {
+          "type": "#endif",
+          "name": "cpTransform",
+          "description": ""
+        },
+        {
+          "type": "#if CP_USE_CGTYPES",
+          "name": "cpTransform",
+          "description": ""
+        },
+        {
+          "type": "typedef CGAffineTransform",
+          "name": "cpTransform",
+          "description": ""
+        },
+        {
+          "type": "#else",
+          "name": "a",
+          "description": ""
+        },
+        {
+          "type": "#else",
+          "name": "b",
+          "description": ""
+        },
+        {
+          "type": "#else",
+          "name": "c",
+          "description": ""
+        },
+        {
+          "type": "#else",
+          "name": "d",
+          "description": ""
+        },
+        {
+          "type": "#else",
+          "name": "tx",
+          "description": ""
+        },
+        {
+          "type": "#else",
+          "name": "ty",
+          "description": ""
+        },
+        {
+          "type": "typedef struct cpTransform {",
+          "name": "a",
+          "description": ""
+        },
+        {
+          "type": "typedef struct cpTransform {",
+          "name": "b",
+          "description": ""
+        },
+        {
+          "type": "typedef struct cpTransform {",
+          "name": "c",
+          "description": ""
+        },
+        {
+          "type": "typedef struct cpTransform {",
+          "name": "d",
+          "description": ""
+        },
+        {
+          "type": "typedef struct cpTransform {",
+          "name": "tx",
+          "description": ""
+        },
+        {
+          "type": "typedef struct cpTransform {",
+          "name": "ty",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "a",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "b",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "c",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "d",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "tx",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "ty",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cpMat2x2",
+      "description": "NUKE",
+      "fields": [
+        {
+          "type": "cpFloat",
+          "name": "a",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "b",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "c",
+          "description": ""
+        },
+        {
+          "type": "cpFloat",
+          "name": "d",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "aliases": [
+    {
+      "type": "double",
+      "name": "cpFloat",
+      "description": "/ Can be reconfigured at compile time."
+    },
+    {
+      "type": "float",
+      "name": "cpFloat",
+      "description": ""
+    },
+    {
+      "type": "CP_HASH_VALUE_TYPE",
+      "name": "cpHashValue",
+      "description": ""
+    },
+    {
+      "type": "uintptr_t",
+      "name": "cpHashValue",
+      "description": ""
+    },
+    {
+      "type": "uint32_t",
+      "name": "cpCollisionID",
+      "description": "/ Should be at least 32 bits."
+    },
+    {
+      "type": "CP_BOOL_TYPE",
+      "name": "cpBool",
+      "description": ""
+    },
+    {
+      "type": "CP_DATA_POINTER_TYPE",
+      "name": "cpDataPointer",
+      "description": ""
+    },
+    {
+      "type": "CP_COLLISION_TYPE_TYPE",
+      "name": "cpCollisionType",
+      "description": ""
+    },
+    {
+      "type": "uintptr_t",
+      "name": "cpCollisionType",
+      "description": "/ Type used for cpSpace.collision_type."
+    },
+    {
+      "type": "CP_GROUP_TYPE",
+      "name": "cpGroup",
+      "description": ""
+    },
+    {
+      "type": "uintptr_t",
+      "name": "cpGroup",
+      "description": "/ Type used for cpShape.group."
+    },
+    {
+      "type": "CP_BITMASK_TYPE",
+      "name": "cpBitmask",
+      "description": ""
+    },
+    {
+      "type": "CP_TIMESTAMP_TYPE",
+      "name": "cpTimestamp",
+      "description": ""
+    },
+    {
+      "type": "CGPoint",
+      "name": "cpVect",
+      "description": ""
+    },
+    {
+      "type": "CGAffineTransform",
+      "name": "cpTransform",
+      "description": ""
+    }
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+  ]
+}

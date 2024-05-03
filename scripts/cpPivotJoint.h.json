@@ -1,0 +1,151 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsPivotJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointAlloc",
+      "description": "",
+      "returnType": "cpPivotJoint*"
+    },
+    {
+      "name": "cpPivotJointInit",
+      "description": "",
+      "returnType": "cpPivotJoint*",
+      "params": [
+        {
+          "type": "cpPivotJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "pivot"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointNew2",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointGetAnchorA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointSetAnchorA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointGetAnchorB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPivotJointSetAnchorB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    }
+  ]
+}

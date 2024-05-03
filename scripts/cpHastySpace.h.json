@@ -1,0 +1,71 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpHastySpaceNew",
+      "description": "",
+      "returnType": "cpSpace *"
+    },
+    {
+      "name": "cpHastySpaceFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpHastySpaceSetThreads",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "unsigned long",
+          "name": "threads"
+        }
+      ]
+    },
+    {
+      "name": "cpHastySpaceGetThreads",
+      "description": "",
+      "returnType": "unsigned long",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpHastySpaceStep",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    }
+  ]
+}

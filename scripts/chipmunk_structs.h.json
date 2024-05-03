@@ -1,0 +1,212 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_STRUCTS_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "CP_POLY_SHAPE_INLINE_ALLOC",
+      "type": "INT",
+      "value": 6,
+      "description": ""
+    }
+  ],
+  "structs": [
+    {
+      "name": "cpConstraintClass",
+      "description": "",
+      "fields": [
+        {
+          "type": "cpConstraintPreStepImpl",
+          "name": "preStep",
+          "description": ""
+        },
+        {
+          "type": "cpConstraintApplyCachedImpulseImpl",
+          "name": "applyCachedImpulse",
+          "description": ""
+        },
+        {
+          "type": "cpConstraintApplyImpulseImpl",
+          "name": "applyImpulse",
+          "description": ""
+        },
+        {
+          "type": "cpConstraintGetImpulseImpl",
+          "name": "getImpulse",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cpPostStepCallback",
+      "description": "",
+      "fields": [
+        {
+          "type": "cpPostStepFunc",
+          "name": "func",
+          "description": ""
+        },
+        {
+          "type": "void *",
+          "name": "key",
+          "description": ""
+        },
+        {
+          "type": "void *",
+          "name": "data",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpShapeCacheDataImpl",
+      "description": "",
+      "returnType": "cpBB",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpTransform",
+          "name": "transform"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeDestroyImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpShapePointQueryImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "p"
+        },
+        {
+          "type": "cpPointQueryInfo *",
+          "name": "info"
+        }
+      ]
+    },
+    {
+      "name": "cpShapeSegmentQueryImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpSegmentQueryInfo *",
+          "name": "info"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintPreStepImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintApplyCachedImpulseImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt_coef"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintApplyImpulseImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetImpulseImpl",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceArbiterApplyImpulseFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        }
+      ]
+    }
+  ],
+  "functions": [
+  ]
+}

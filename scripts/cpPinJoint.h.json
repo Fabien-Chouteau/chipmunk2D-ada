@@ -1,0 +1,158 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsPinJoint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointAlloc",
+      "description": "",
+      "returnType": "cpPinJoint*"
+    },
+    {
+      "name": "cpPinJointInit",
+      "description": "",
+      "returnType": "cpPinJoint*",
+      "params": [
+        {
+          "type": "cpPinJoint *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointGetAnchorA",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointSetAnchorA",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorA"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointGetAnchorB",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointSetAnchorB",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpVect",
+          "name": "anchorB"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointGetDist",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpPinJointSetDist",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dist"
+        }
+      ]
+    }
+  ]
+}

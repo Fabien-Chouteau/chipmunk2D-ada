@@ -1,0 +1,214 @@
+{
+  "defines": [
+    {
+      "name": "cpPolylineConvexDecomposition_BETA",
+      "type": "UNKNOWN",
+      "value": "cpPolylineConvexDecomposition",
+      "description": ""
+    }
+  ],
+  "structs": [
+    {
+      "name": "cpPolyline",
+      "description": "cpPolyline structs are intended to be passed by value and destroyed when you are done with them.",
+      "fields": [
+        {
+          "type": "int",
+          "name": "count",
+          "description": ""
+        },
+        {
+          "type": "int",
+          "name": "capacity",
+          "description": ""
+        },
+        {
+          "type": "cpVect[]",
+          "name": "verts",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSet",
+      "description": "/ Polyline sets are collections of polylines, generally built by cpMarchSoft() or cpMarchHard().",
+      "fields": [
+        {
+          "type": "int",
+          "name": "count",
+          "description": ""
+        },
+        {
+          "type": "int",
+          "name": "capacity",
+          "description": ""
+        },
+        {
+          "type": "cpPolyline **",
+          "name": "lines",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpPolylineFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpPolyline *",
+          "name": "line"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineIsClosed",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpPolyline *",
+          "name": "line"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSimplifyCurves",
+      "description": "",
+      "returnType": "cpPolyline *",
+      "params": [
+        {
+          "type": "cpPolyline *",
+          "name": "line"
+        },
+        {
+          "type": "cpFloat",
+          "name": "tol"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSimplifyVertexes",
+      "description": "",
+      "returnType": "cpPolyline *",
+      "params": [
+        {
+          "type": "cpPolyline *",
+          "name": "line"
+        },
+        {
+          "type": "cpFloat",
+          "name": "tol"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineToConvexHull",
+      "description": "",
+      "returnType": "cpPolyline *",
+      "params": [
+        {
+          "type": "cpPolyline *",
+          "name": "line"
+        },
+        {
+          "type": "cpFloat",
+          "name": "tol"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSetAlloc",
+      "description": "",
+      "returnType": "cpPolylineSet *"
+    },
+    {
+      "name": "cpPolylineSetInit",
+      "description": "",
+      "returnType": "cpPolylineSet *",
+      "params": [
+        {
+          "type": "cpPolylineSet *",
+          "name": "set"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSetNew",
+      "description": "",
+      "returnType": "cpPolylineSet *"
+    },
+    {
+      "name": "cpPolylineSetDestroy",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpPolylineSet *",
+          "name": "set"
+        },
+        {
+          "type": "cpBool",
+          "name": "freePolylines"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSetFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpPolylineSet *",
+          "name": "set"
+        },
+        {
+          "type": "cpBool",
+          "name": "freePolylines"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineSetCollectSegment",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "v0"
+        },
+        {
+          "type": "cpVect",
+          "name": "v1"
+        },
+        {
+          "type": "cpPolylineSet *",
+          "name": "lines"
+        }
+      ]
+    },
+    {
+      "name": "cpPolylineConvexDecomposition",
+      "description": "",
+      "returnType": "cpPolylineSet *",
+      "params": [
+        {
+          "type": "cpPolyline *",
+          "name": "line"
+        },
+        {
+          "type": "cpFloat",
+          "name": "tol"
+        }
+      ]
+    }
+  ]
+}

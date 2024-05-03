@@ -1,0 +1,1317 @@
+{
+  "defines": [
+  ],
+  "structs": [
+    {
+      "name": "cpSpaceDebugColor",
+      "description": "/ Color type to use with the space debug drawing API.",
+      "fields": [
+        {
+          "type": "float",
+          "name": "r",
+          "description": ""
+        },
+        {
+          "type": "float",
+          "name": "g",
+          "description": ""
+        },
+        {
+          "type": "float",
+          "name": "b",
+          "description": ""
+        },
+        {
+          "type": "float",
+          "name": "a",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawOptions",
+      "description": "/ Struct used with cpSpaceDebugDraw() containing drawing callbacks and other drawing settings.",
+      "fields": [
+        {
+          "type": "cpSpaceDebugDrawCircleImpl",
+          "name": "drawCircle",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugDrawSegmentImpl",
+          "name": "drawSegment",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugDrawFatSegmentImpl",
+          "name": "drawFatSegment",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugDrawPolygonImpl",
+          "name": "drawPolygon",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugDrawDotImpl",
+          "name": "drawDot",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugDrawFlags",
+          "name": "flags",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "shapeOutlineColor",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugDrawColorForShapeImpl",
+          "name": "colorForShape",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "constraintColor",
+          "description": ""
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "collisionPointColor",
+          "description": ""
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpCollisionBeginFunc",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpCollisionPreSolveFunc",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpCollisionPostSolveFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpCollisionSeparateFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpArbiter *",
+          "name": "arb"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpPostStepFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "void *",
+          "name": "key"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpacePointQueryFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        },
+        {
+          "type": "cpFloat",
+          "name": "distance"
+        },
+        {
+          "type": "cpVect",
+          "name": "gradient"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSegmentQueryFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        },
+        {
+          "type": "cpVect",
+          "name": "normal"
+        },
+        {
+          "type": "cpFloat",
+          "name": "alpha"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceBBQueryFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceShapeQueryFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpContactPointSet *",
+          "name": "points"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceBodyIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceShapeIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceConstraintIteratorFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawCircleImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "pos"
+        },
+        {
+          "type": "cpFloat",
+          "name": "angle"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "outlineColor"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "fillColor"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawSegmentImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "color"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawFatSegmentImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpVect",
+          "name": "a"
+        },
+        {
+          "type": "cpVect",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "outlineColor"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "fillColor"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawPolygonImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "outlineColor"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "fillColor"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawDotImpl",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpFloat",
+          "name": "size"
+        },
+        {
+          "type": "cpVect",
+          "name": "pos"
+        },
+        {
+          "type": "cpSpaceDebugColor",
+          "name": "color"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDrawColorForShapeImpl",
+      "description": "",
+      "returnType": "cpSpaceDebugColor",
+      "params": [
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "data"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpSpaceAlloc",
+      "description": "",
+      "returnType": "cpSpace*"
+    },
+    {
+      "name": "cpSpaceInit",
+      "description": "",
+      "returnType": "cpSpace*",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceNew",
+      "description": "",
+      "returnType": "cpSpace*"
+    },
+    {
+      "name": "cpSpaceDestroy",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetIterations",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetIterations",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "int",
+          "name": "iterations"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetGravity",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetGravity",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpVect",
+          "name": "gravity"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetDamping",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetDamping",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "damping"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetIdleSpeedThreshold",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetIdleSpeedThreshold",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "idleSpeedThreshold"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetSleepTimeThreshold",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetSleepTimeThreshold",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "sleepTimeThreshold"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetCollisionSlop",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetCollisionSlop",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "collisionSlop"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetCollisionBias",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetCollisionBias",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "collisionBias"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetCollisionPersistence",
+      "description": "",
+      "returnType": "cpTimestamp",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetCollisionPersistence",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpTimestamp",
+          "name": "collisionPersistence"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetUserData",
+      "description": "",
+      "returnType": "cpDataPointer",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSetUserData",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetStaticBody",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceGetCurrentTimeStep",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceIsLocked",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddDefaultCollisionHandler",
+      "description": "",
+      "returnType": "cpCollisionHandler *",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddCollisionHandler",
+      "description": "",
+      "returnType": "cpCollisionHandler *",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpCollisionType",
+          "name": "a"
+        },
+        {
+          "type": "cpCollisionType",
+          "name": "b"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddWildcardHandler",
+      "description": "",
+      "returnType": "cpCollisionHandler *",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpCollisionType",
+          "name": "type"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddShape",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddBody",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddConstraint",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceRemoveShape",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceRemoveBody",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceRemoveConstraint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceContainsShape",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceContainsBody",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceContainsConstraint",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceAddPostStepCallback",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpPostStepFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "key"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpacePointQuery",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        },
+        {
+          "type": "cpFloat",
+          "name": "maxDistance"
+        },
+        {
+          "type": "cpShapeFilter",
+          "name": "filter"
+        },
+        {
+          "type": "cpSpacePointQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpacePointQueryNearest",
+      "description": "",
+      "returnType": "cpShape *",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpVect",
+          "name": "point"
+        },
+        {
+          "type": "cpFloat",
+          "name": "maxDistance"
+        },
+        {
+          "type": "cpShapeFilter",
+          "name": "filter"
+        },
+        {
+          "type": "cpPointQueryInfo *",
+          "name": "out"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSegmentQuery",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpVect",
+          "name": "start"
+        },
+        {
+          "type": "cpVect",
+          "name": "end"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpShapeFilter",
+          "name": "filter"
+        },
+        {
+          "type": "cpSpaceSegmentQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceSegmentQueryFirst",
+      "description": "",
+      "returnType": "cpShape *",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpVect",
+          "name": "start"
+        },
+        {
+          "type": "cpVect",
+          "name": "end"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        },
+        {
+          "type": "cpShapeFilter",
+          "name": "filter"
+        },
+        {
+          "type": "cpSegmentQueryInfo *",
+          "name": "out"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceBBQuery",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpBB",
+          "name": "bb"
+        },
+        {
+          "type": "cpShapeFilter",
+          "name": "filter"
+        },
+        {
+          "type": "cpSpaceBBQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceShapeQuery",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "cpSpaceShapeQueryFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceEachBody",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpSpaceBodyIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceEachShape",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpSpaceShapeIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceEachConstraint",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpSpaceConstraintIteratorFunc",
+          "name": "func"
+        },
+        {
+          "type": "void *",
+          "name": "data"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceReindexStatic",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceReindexShape",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceReindexShapesForBody",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceUseSpatialHash",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dim"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceStep",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpFloat",
+          "name": "dt"
+        }
+      ]
+    },
+    {
+      "name": "cpSpaceDebugDraw",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        },
+        {
+          "type": "cpSpaceDebugDrawOptions *",
+          "name": "options"
+        }
+      ]
+    }
+  ]
+}

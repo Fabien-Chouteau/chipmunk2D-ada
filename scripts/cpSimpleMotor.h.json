@@ -1,0 +1,98 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintIsSimpleMotor",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSimpleMotorAlloc",
+      "description": "",
+      "returnType": "cpSimpleMotor*"
+    },
+    {
+      "name": "cpSimpleMotorInit",
+      "description": "",
+      "returnType": "cpSimpleMotor*",
+      "params": [
+        {
+          "type": "cpSimpleMotor *",
+          "name": "joint"
+        },
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "rate"
+        }
+      ]
+    },
+    {
+      "name": "cpSimpleMotorNew",
+      "description": "",
+      "returnType": "cpConstraint*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "a"
+        },
+        {
+          "type": "cpBody *",
+          "name": "b"
+        },
+        {
+          "type": "cpFloat",
+          "name": "rate"
+        }
+      ]
+    },
+    {
+      "name": "cpSimpleMotorGetRate",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpSimpleMotorSetRate",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "rate"
+        }
+      ]
+    }
+  ]
+}

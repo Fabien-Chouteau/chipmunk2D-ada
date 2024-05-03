@@ -1,0 +1,20 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_TRANSFORM_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+    {
+      "name": "cpConstraintPreSolveFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintPostSolveFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpSpace *",
+          "name": "space"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "cpConstraintDestroy",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintFree",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetSpace",
+      "description": "",
+      "returnType": "cpSpace*",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetBodyA",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetBodyB",
+      "description": "",
+      "returnType": "cpBody*",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetMaxForce",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetMaxForce",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "maxForce"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetErrorBias",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetErrorBias",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "errorBias"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetMaxBias",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetMaxBias",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpFloat",
+          "name": "maxBias"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetCollideBodies",
+      "description": "",
+      "returnType": "cpBool",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetCollideBodies",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpBool",
+          "name": "collideBodies"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetPreSolveFunc",
+      "description": "",
+      "returnType": "cpConstraintPreSolveFunc",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetPreSolveFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpConstraintPreSolveFunc",
+          "name": "preSolveFunc"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetPostSolveFunc",
+      "description": "",
+      "returnType": "cpConstraintPostSolveFunc",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetPostSolveFunc",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpConstraintPostSolveFunc",
+          "name": "postSolveFunc"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetUserData",
+      "description": "",
+      "returnType": "cpDataPointer",
+      "params": [
+        {
+          "type": "const cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintSetUserData",
+      "description": "",
+      "returnType": "void",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        },
+        {
+          "type": "cpDataPointer",
+          "name": "userData"
+        }
+      ]
+    },
+    {
+      "name": "cpConstraintGetImpulse",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "cpConstraint *",
+          "name": "constraint"
+        }
+      ]
+    }
+  ]
+}

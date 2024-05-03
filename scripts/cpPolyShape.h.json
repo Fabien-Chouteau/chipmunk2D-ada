@@ -1,0 +1,256 @@
+{
+  "defines": [
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+    {
+      "name": "cpPolyShapeAlloc",
+      "description": "",
+      "returnType": "cpPolyShape*"
+    },
+    {
+      "name": "cpPolyShapeInit",
+      "description": "",
+      "returnType": "cpPolyShape*",
+      "params": [
+        {
+          "type": "cpPolyShape *",
+          "name": "poly"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpTransform",
+          "name": "transform"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeInitRaw",
+      "description": "",
+      "returnType": "cpPolyShape*",
+      "params": [
+        {
+          "type": "cpPolyShape *",
+          "name": "poly"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeNew",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpTransform",
+          "name": "transform"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeNewRaw",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "int",
+          "name": "count"
+        },
+        {
+          "type": "const cpVect *",
+          "name": "verts"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpBoxShapeInit",
+      "description": "",
+      "returnType": "cpPolyShape*",
+      "params": [
+        {
+          "type": "cpPolyShape *",
+          "name": "poly"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "width"
+        },
+        {
+          "type": "cpFloat",
+          "name": "height"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpBoxShapeInit2",
+      "description": "",
+      "returnType": "cpPolyShape*",
+      "params": [
+        {
+          "type": "cpPolyShape *",
+          "name": "poly"
+        },
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBB",
+          "name": "box"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpBoxShapeNew",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpFloat",
+          "name": "width"
+        },
+        {
+          "type": "cpFloat",
+          "name": "height"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpBoxShapeNew2",
+      "description": "",
+      "returnType": "cpShape*",
+      "params": [
+        {
+          "type": "cpBody *",
+          "name": "body"
+        },
+        {
+          "type": "cpBB",
+          "name": "box"
+        },
+        {
+          "type": "cpFloat",
+          "name": "radius"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeGetCount",
+      "description": "",
+      "returnType": "int",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeGetVert",
+      "description": "",
+      "returnType": "cpVect",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        },
+        {
+          "type": "int",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cpPolyShapeGetRadius",
+      "description": "",
+      "returnType": "cpFloat",
+      "params": [
+        {
+          "type": "const cpShape *",
+          "name": "shape"
+        }
+      ]
+    }
+  ]
+}

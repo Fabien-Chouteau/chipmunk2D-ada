@@ -1,0 +1,20 @@
+{
+  "defines": [
+    {
+      "name": "CHIPMUNK_VECT_H",
+      "type": "GUARD",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "structs": [
+  ],
+  "aliases": [
+  ],
+  "enums": [
+  ],
+  "callbacks": [
+  ],
+  "functions": [
+  ]
+}

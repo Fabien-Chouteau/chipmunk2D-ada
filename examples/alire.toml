@@ -1,0 +1,24 @@
+name = "examples"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Fabien Chouteau"]
+maintainers = ["Fabien Chouteau <fabien.chouteau@gmail.com>"]
+maintainers-logins = ["Fabien-Chouteau"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["examples"]
+
+[[depends-on]]
+chipmunk2d = "*"
+
+[[pins]]
+chipmunk2d = { path = "../" }
+
+[[depends-on]]
+raylib = "~0.1.0-dev"
+
+[[pins]]
+raylib = { url='https://github.com/Fabien-Chouteau/raylib-ada' }
