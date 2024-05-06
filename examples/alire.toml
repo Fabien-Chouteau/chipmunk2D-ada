@@ -22,3 +22,6 @@ raylib = "~0.1.0-dev"
 
 [[pins]]
 raylib = { url='https://github.com/Fabien-Chouteau/raylib-ada' }
+
+[[depends-on]]
+resources = "~0.1.0"
