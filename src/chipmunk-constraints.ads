@@ -12,84 +12,84 @@ is
 
      with Convention => C;
 
-   procedure cpConstraintDestroy (constraint : cpConstraint);
+   procedure Destroy (constraint : cpConstraint);
    --  
-   pragma Import (C, cpConstraintDestroy, "cpConstraintDestroy");
+   pragma Import (C, Destroy, "cpConstraintDestroy");
 
-   procedure cpConstraintFree (constraint : cpConstraint);
+   procedure Free (constraint : cpConstraint);
    --  
-   pragma Import (C, cpConstraintFree, "cpConstraintFree");
+   pragma Import (C, Free, "cpConstraintFree");
 
-   function cpConstraintGetSpace (constraint : cpConstraint) return cpSpace;
+   function GetSpace (constraint : cpConstraint) return cpSpace;
    --  
-   pragma Import (C, cpConstraintGetSpace, "cpConstraintGetSpace");
+   pragma Import (C, GetSpace, "cpConstraintGetSpace");
 
-   function cpConstraintGetBodyA (constraint : cpConstraint) return cpBody;
+   function GetBodyA (constraint : cpConstraint) return cpBody;
    --  
-   pragma Import (C, cpConstraintGetBodyA, "cpConstraintGetBodyA");
+   pragma Import (C, GetBodyA, "cpConstraintGetBodyA");
 
-   function cpConstraintGetBodyB (constraint : cpConstraint) return cpBody;
+   function GetBodyB (constraint : cpConstraint) return cpBody;
    --  
-   pragma Import (C, cpConstraintGetBodyB, "cpConstraintGetBodyB");
+   pragma Import (C, GetBodyB, "cpConstraintGetBodyB");
 
-   function cpConstraintGetMaxForce (constraint : cpConstraint) return cpFloat;
+   function GetMaxForce (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpConstraintGetMaxForce, "cpConstraintGetMaxForce");
+   pragma Import (C, GetMaxForce, "cpConstraintGetMaxForce");
 
-   procedure cpConstraintSetMaxForce (constraint : cpConstraint; maxForce : cpFloat);
+   procedure SetMaxForce (constraint : cpConstraint; maxForce : cpFloat);
    --  
-   pragma Import (C, cpConstraintSetMaxForce, "cpConstraintSetMaxForce");
+   pragma Import (C, SetMaxForce, "cpConstraintSetMaxForce");
 
-   function cpConstraintGetErrorBias (constraint : cpConstraint) return cpFloat;
+   function GetErrorBias (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpConstraintGetErrorBias, "cpConstraintGetErrorBias");
+   pragma Import (C, GetErrorBias, "cpConstraintGetErrorBias");
 
-   procedure cpConstraintSetErrorBias (constraint : cpConstraint; errorBias : cpFloat);
+   procedure SetErrorBias (constraint : cpConstraint; errorBias : cpFloat);
    --  
-   pragma Import (C, cpConstraintSetErrorBias, "cpConstraintSetErrorBias");
+   pragma Import (C, SetErrorBias, "cpConstraintSetErrorBias");
 
-   function cpConstraintGetMaxBias (constraint : cpConstraint) return cpFloat;
+   function GetMaxBias (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpConstraintGetMaxBias, "cpConstraintGetMaxBias");
+   pragma Import (C, GetMaxBias, "cpConstraintGetMaxBias");
 
-   procedure cpConstraintSetMaxBias (constraint : cpConstraint; maxBias : cpFloat);
+   procedure SetMaxBias (constraint : cpConstraint; maxBias : cpFloat);
    --  
-   pragma Import (C, cpConstraintSetMaxBias, "cpConstraintSetMaxBias");
+   pragma Import (C, SetMaxBias, "cpConstraintSetMaxBias");
 
-   function cpConstraintGetCollideBodies (constraint : cpConstraint) return cpBool;
+   function GetCollideBodies (constraint : cpConstraint) return cpBool;
    --  
-   pragma Import (C, cpConstraintGetCollideBodies, "cpConstraintGetCollideBodies");
+   pragma Import (C, GetCollideBodies, "cpConstraintGetCollideBodies");
 
-   procedure cpConstraintSetCollideBodies (constraint : cpConstraint; collideBodies : cpBool);
+   procedure SetCollideBodies (constraint : cpConstraint; collideBodies : cpBool);
    --  
-   pragma Import (C, cpConstraintSetCollideBodies, "cpConstraintSetCollideBodies");
+   pragma Import (C, SetCollideBodies, "cpConstraintSetCollideBodies");
 
-   function cpConstraintGetPreSolveFunc (constraint : cpConstraint) return cpConstraintPreSolveFunc;
+   function GetPreSolveFunc (constraint : cpConstraint) return cpConstraintPreSolveFunc;
    --  
-   pragma Import (C, cpConstraintGetPreSolveFunc, "cpConstraintGetPreSolveFunc");
+   pragma Import (C, GetPreSolveFunc, "cpConstraintGetPreSolveFunc");
 
-   procedure cpConstraintSetPreSolveFunc (constraint : cpConstraint; preSolveFunc : cpConstraintPreSolveFunc);
+   procedure SetPreSolveFunc (constraint : cpConstraint; preSolveFunc : cpConstraintPreSolveFunc);
    --  
-   pragma Import (C, cpConstraintSetPreSolveFunc, "cpConstraintSetPreSolveFunc");
+   pragma Import (C, SetPreSolveFunc, "cpConstraintSetPreSolveFunc");
 
-   function cpConstraintGetPostSolveFunc (constraint : cpConstraint) return cpConstraintPostSolveFunc;
+   function GetPostSolveFunc (constraint : cpConstraint) return cpConstraintPostSolveFunc;
    --  
-   pragma Import (C, cpConstraintGetPostSolveFunc, "cpConstraintGetPostSolveFunc");
+   pragma Import (C, GetPostSolveFunc, "cpConstraintGetPostSolveFunc");
 
-   procedure cpConstraintSetPostSolveFunc (constraint : cpConstraint; postSolveFunc : cpConstraintPostSolveFunc);
+   procedure SetPostSolveFunc (constraint : cpConstraint; postSolveFunc : cpConstraintPostSolveFunc);
    --  
-   pragma Import (C, cpConstraintSetPostSolveFunc, "cpConstraintSetPostSolveFunc");
+   pragma Import (C, SetPostSolveFunc, "cpConstraintSetPostSolveFunc");
 
-   function cpConstraintGetUserData (constraint : cpConstraint) return cpDataPointer;
+   function GetUserData (constraint : cpConstraint) return cpDataPointer;
    --  
-   pragma Import (C, cpConstraintGetUserData, "cpConstraintGetUserData");
+   pragma Import (C, GetUserData, "cpConstraintGetUserData");
 
-   procedure cpConstraintSetUserData (constraint : cpConstraint; userData : cpDataPointer);
+   procedure SetUserData (constraint : cpConstraint; userData : cpDataPointer);
    --  
-   pragma Import (C, cpConstraintSetUserData, "cpConstraintSetUserData");
+   pragma Import (C, SetUserData, "cpConstraintSetUserData");
 
-   function cpConstraintGetImpulse (constraint : cpConstraint) return cpFloat;
+   function GetImpulse (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpConstraintGetImpulse, "cpConstraintGetImpulse");
+   pragma Import (C, GetImpulse, "cpConstraintGetImpulse");
 
 end Chipmunk.Constraints;

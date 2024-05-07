@@ -218,11 +218,16 @@ def function_decl(function, spec=True, callback=False):
         out += f"   type {function['name']} is access "
         function["name"] = ""
 
+    if "ada-name" in function:
+        name = function["ada-name"]
+    else:
+        name = function["name"]
+
     term = (";" if not callback else "") if spec else " is"
     if function["returnType"] is None:
-        out += f"   procedure {function['name']}{params_str}{term}\n"
+        out += f"   procedure {name}{params_str}{term}\n"
     else:
-        out += f"   function {function['name']}{params_str} return {function['returnType']}{term}\n"
+        out += f"   function {name}{params_str} return {function['returnType']}{term}\n"
     if spec and not callback:
         out += f"   --  {function['description']}\n"
     return out
@@ -306,11 +311,13 @@ def gen_function(function):
     else:
         function["params"] = None
 
+    if "ada-name" in function:
+        name = function["ada-name"]
+    else:
+        name = function["name"]
+
     spec += function_decl(function)
-    if function["name"] == "GetColor":
-        # Declare a variant of get color that will work with the output of GuiGetStyle
-        spec += "   function GetColor (hexValue : Interfaces.C.int) return Color;\n"
-    spec += f"   pragma Import (C, {function['name']}, \"{function['name']}\");\n\n"
+    spec += f"   pragma Import (C, {name}, \"{function['name']}\");\n\n"
 
     if has_string:
         # This sub-program either returns a string or takes a string argument.
@@ -360,7 +367,7 @@ def gen_callback(callback):
     return out
 
 
-def gen_binding(json_file, package_name, package_file):
+def gen_binding(json_file, package_name, package_file, function_prefix):
 
     SKIP_CALLBACKS = []
     SKIP_STRUCTS = ["cpSpaceDebugColor"]
@@ -396,6 +403,19 @@ def gen_binding(json_file, package_name, package_file):
         if struct["name"] not in SKIP_STRUCTS:
             spec += gen_struct(struct)
 
+    if function_prefix != "":
+        extended_funcs = []
+        for function in data["functions"]:
+            extended_funcs.append(function)
+            if function["name"].startswith(function_prefix):
+                short_version = function
+                ada_name = short_version["name"].removeprefix(function_prefix)
+                if ada_name in ["New", "New2"]:
+                    ada_name += function_prefix.removeprefix("cp")
+                short_version["ada-name"] = ada_name
+                extended_funcs.append(short_version)
+        data["function"] = extended_funcs
+
     for function in data["functions"]:
         if function["name"] not in SKIP_FUNCTIONS:
             f_spec, f_body = gen_function(function)
@@ -424,61 +444,70 @@ def gen_binding(json_file, package_name, package_file):
 
 
 # gen_binding("chipmunk_structs.h.json", "Chipmunk.Types", "chipmunk-types")
-gen_binding("cpBody.h.json", "Chipmunk.Bodies", "chipmunk-bodies")
-gen_binding("cpSpace.h.json", "Chipmunk.Spaces", "chipmunk-spaces")
-gen_binding("cpShape.h.json", "Chipmunk.Shapes", "chipmunk-shapes")
-gen_binding("cpPolyShape.h.json", "Chipmunk.PolyShapes", "chipmunk-polyshapes")
-gen_binding("cpConstraint.h.json", "Chipmunk.Constraints", "chipmunk-constraints")
+gen_binding("cpBody.h.json", "Chipmunk.Bodies", "chipmunk-bodies", "cpBody")
+gen_binding("cpSpace.h.json", "Chipmunk.Spaces", "chipmunk-spaces", "cpSpace")
+gen_binding("cpShape.h.json", "Chipmunk.Shapes", "chipmunk-shapes", "cpShape")
 gen_binding(
-    "cpDampedSpring.h.json", "Chipmunk.Damped_Springs", "chipmunk-damped_springs"
+    "cpPolyShape.h.json", "Chipmunk.PolyShapes", "chipmunk-polyshapes", "cpPolyShape"
+)
+gen_binding(
+    "cpConstraint.h.json",
+    "Chipmunk.Constraints",
+    "chipmunk-constraints",
+    "cpConstraint",
+)
+gen_binding(
+    "cpDampedSpring.h.json",
+    "Chipmunk.Damped_Springs",
+    "chipmunk-damped_springs",
+    "cpDampedSpring",
 )
 gen_binding(
     "cpDampedRotarySpring.h.json",
     "Chipmunk.Damped_Rotary_Springs",
     "chipmunk-damped_rotary_springs",
+    "cpDampedRotarySpring",
 )
 gen_binding(
     "cpPivotJoint.h.json",
     "Chipmunk.Pivot_Joints",
     "chipmunk-pivot_joints",
+    "cpPivotJoint",
 )
 gen_binding(
-    "cpPinJoint.h.json",
-    "Chipmunk.Pin_Joints",
-    "chipmunk-pin_joints",
+    "cpPinJoint.h.json", "Chipmunk.Pin_Joints", "chipmunk-pin_joints", "cpPinJoint"
 )
 gen_binding(
-    "cpGearJoint.h.json",
-    "Chipmunk.Gear_Joints",
-    "chipmunk-gear_joints",
+    "cpGearJoint.h.json", "Chipmunk.Gear_Joints", "chipmunk-gear_joints", "cpGearJoin"
 )
 gen_binding(
     "cpGrooveJoint.h.json",
     "Chipmunk.Groove_Joints",
     "chipmunk-groove_joints",
+    "cpGrooveJoint",
 )
 gen_binding(
     "cpRatchetJoint.h.json",
     "Chipmunk.Ratchet_Joints",
     "chipmunk-ratchet_joints",
+    "cpRatchetJoint",
 )
 gen_binding(
     "cpRotaryLimitJoint.h.json",
     "Chipmunk.Rotary_Limit_Joints",
     "chipmunk-rotary_limit_joints",
+    "cpRotaryLimitJoint",
 )
 gen_binding(
     "cpSlideJoint.h.json",
     "Chipmunk.Slide_Joints",
     "chipmunk-slide_joints",
+    "cpSlideJoint",
 )
 gen_binding(
     "cpSimpleMotor.h.json",
     "Chipmunk.Simple_Motors",
     "chipmunk-simple_motors",
+    "cpSimpleMotor",
 )
-gen_binding(
-    "cpArbiter.h.json",
-    "Chipmunk.Arbiters",
-    "chipmunk-arbiters",
-)
+gen_binding("cpArbiter.h.json", "Chipmunk.Arbiters", "chipmunk-arbiters", "cpArbiter")

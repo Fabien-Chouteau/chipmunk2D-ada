@@ -20,7 +20,7 @@ package body Chipmunk_Raylib_Debug is
 
    procedure Draw_Debug (Space : cpSpace) is
    begin
-      Chipmunk.Spaces.cpSpaceDebugDraw (Space, Debug_Draw'Access);
+      Chipmunk.Spaces.DebugDraw (Space, Debug_Draw'Access);
    end Draw_Debug;
 
    function To_Raylib_color (C : cpSpaceDebugColor) return Color
@@ -177,11 +177,11 @@ package body Chipmunk_Raylib_Debug is
       Bod : cpBody;
       Ptr : Pointer := To_Unsigned (shape);
    begin
-      if Chipmunk.Shapes.cpShapeGetSensor (shape) then
+      if Chipmunk.Shapes.GetSensor (shape) then
          return (1.0, 1.0, 1.0, 0.1);
       else
-         Bod := Chipmunk.Shapes.cpShapeGetBody (shape);
-         if Chipmunk.Bodies.cpBodyIsSleeping (Bod) then
+         Bod := Chipmunk.Shapes.GetBody (shape);
+         if Chipmunk.Bodies.IsSleeping (Bod) then
             return (88.0 / 255.0,
                     110.0 / 255.0,
                     117.0 / 255.0,

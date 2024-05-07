@@ -12,64 +12,64 @@ is
    --  
    pragma Import (C, cpConstraintIsDampedSpring, "cpConstraintIsDampedSpring");
 
-   function cpDampedSpringAlloc return cpDampedSpring;
+   function Alloc return cpDampedSpring;
    --  
-   pragma Import (C, cpDampedSpringAlloc, "cpDampedSpringAlloc");
+   pragma Import (C, Alloc, "cpDampedSpringAlloc");
 
-   function cpDampedSpringInit (joint : cpDampedSpring; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; restLength : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpDampedSpring;
+   function Init (joint : cpDampedSpring; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; restLength : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpDampedSpring;
    --  
-   pragma Import (C, cpDampedSpringInit, "cpDampedSpringInit");
+   pragma Import (C, Init, "cpDampedSpringInit");
 
-   function cpDampedSpringNew (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; restLength : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpConstraint;
+   function NewDampedSpring (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; restLength : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpDampedSpringNew, "cpDampedSpringNew");
+   pragma Import (C, NewDampedSpring, "cpDampedSpringNew");
 
-   function cpDampedSpringGetAnchorA (constraint : cpConstraint) return cpVect;
+   function GetAnchorA (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpDampedSpringGetAnchorA, "cpDampedSpringGetAnchorA");
+   pragma Import (C, GetAnchorA, "cpDampedSpringGetAnchorA");
 
-   procedure cpDampedSpringSetAnchorA (constraint : cpConstraint; anchorA : cpVect);
+   procedure SetAnchorA (constraint : cpConstraint; anchorA : cpVect);
    --  
-   pragma Import (C, cpDampedSpringSetAnchorA, "cpDampedSpringSetAnchorA");
+   pragma Import (C, SetAnchorA, "cpDampedSpringSetAnchorA");
 
-   function cpDampedSpringGetAnchorB (constraint : cpConstraint) return cpVect;
+   function GetAnchorB (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpDampedSpringGetAnchorB, "cpDampedSpringGetAnchorB");
+   pragma Import (C, GetAnchorB, "cpDampedSpringGetAnchorB");
 
-   procedure cpDampedSpringSetAnchorB (constraint : cpConstraint; anchorB : cpVect);
+   procedure SetAnchorB (constraint : cpConstraint; anchorB : cpVect);
    --  
-   pragma Import (C, cpDampedSpringSetAnchorB, "cpDampedSpringSetAnchorB");
+   pragma Import (C, SetAnchorB, "cpDampedSpringSetAnchorB");
 
-   function cpDampedSpringGetRestLength (constraint : cpConstraint) return cpFloat;
+   function GetRestLength (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpDampedSpringGetRestLength, "cpDampedSpringGetRestLength");
+   pragma Import (C, GetRestLength, "cpDampedSpringGetRestLength");
 
-   procedure cpDampedSpringSetRestLength (constraint : cpConstraint; restLength : cpFloat);
+   procedure SetRestLength (constraint : cpConstraint; restLength : cpFloat);
    --  
-   pragma Import (C, cpDampedSpringSetRestLength, "cpDampedSpringSetRestLength");
+   pragma Import (C, SetRestLength, "cpDampedSpringSetRestLength");
 
-   function cpDampedSpringGetStiffness (constraint : cpConstraint) return cpFloat;
+   function GetStiffness (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpDampedSpringGetStiffness, "cpDampedSpringGetStiffness");
+   pragma Import (C, GetStiffness, "cpDampedSpringGetStiffness");
 
-   procedure cpDampedSpringSetStiffness (constraint : cpConstraint; stiffness : cpFloat);
+   procedure SetStiffness (constraint : cpConstraint; stiffness : cpFloat);
    --  
-   pragma Import (C, cpDampedSpringSetStiffness, "cpDampedSpringSetStiffness");
+   pragma Import (C, SetStiffness, "cpDampedSpringSetStiffness");
 
-   function cpDampedSpringGetDamping (constraint : cpConstraint) return cpFloat;
+   function GetDamping (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpDampedSpringGetDamping, "cpDampedSpringGetDamping");
+   pragma Import (C, GetDamping, "cpDampedSpringGetDamping");
 
-   procedure cpDampedSpringSetDamping (constraint : cpConstraint; damping : cpFloat);
+   procedure SetDamping (constraint : cpConstraint; damping : cpFloat);
    --  
-   pragma Import (C, cpDampedSpringSetDamping, "cpDampedSpringSetDamping");
+   pragma Import (C, SetDamping, "cpDampedSpringSetDamping");
 
-   function cpDampedSpringGetSpringForceFunc (constraint : cpConstraint) return cpDampedSpringForceFunc;
+   function GetSpringForceFunc (constraint : cpConstraint) return cpDampedSpringForceFunc;
    --  
-   pragma Import (C, cpDampedSpringGetSpringForceFunc, "cpDampedSpringGetSpringForceFunc");
+   pragma Import (C, GetSpringForceFunc, "cpDampedSpringGetSpringForceFunc");
 
-   procedure cpDampedSpringSetSpringForceFunc (constraint : cpConstraint; springForceFunc : cpDampedSpringForceFunc);
+   procedure SetSpringForceFunc (constraint : cpConstraint; springForceFunc : cpDampedSpringForceFunc);
    --  
-   pragma Import (C, cpDampedSpringSetSpringForceFunc, "cpDampedSpringSetSpringForceFunc");
+   pragma Import (C, SetSpringForceFunc, "cpDampedSpringSetSpringForceFunc");
 
 end Chipmunk.Damped_Springs;

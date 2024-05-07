@@ -27,133 +27,133 @@ is
    end record
       with Convention => C_Pass_By_Copy;
 
-   procedure cpShapeDestroy (shape : cpShape);
+   procedure Destroy (shape : cpShape);
    --  
-   pragma Import (C, cpShapeDestroy, "cpShapeDestroy");
+   pragma Import (C, Destroy, "cpShapeDestroy");
 
-   procedure cpShapeFree (shape : cpShape);
+   procedure Free (shape : cpShape);
    --  
-   pragma Import (C, cpShapeFree, "cpShapeFree");
+   pragma Import (C, Free, "cpShapeFree");
 
-   function cpShapeCacheBB (shape : cpShape) return cpBB;
+   function CacheBB (shape : cpShape) return cpBB;
    --  
-   pragma Import (C, cpShapeCacheBB, "cpShapeCacheBB");
+   pragma Import (C, CacheBB, "cpShapeCacheBB");
 
-   function cpShapeUpdate (shape : cpShape; transform : cpTransform) return cpBB;
+   function Update (shape : cpShape; transform : cpTransform) return cpBB;
    --  
-   pragma Import (C, cpShapeUpdate, "cpShapeUpdate");
+   pragma Import (C, Update, "cpShapeUpdate");
 
-   function cpShapePointQuery (shape : cpShape; p : cpVect; out_p : cpPointQueryInfo) return cpFloat;
+   function PointQuery (shape : cpShape; p : cpVect; out_p : cpPointQueryInfo) return cpFloat;
    --  
-   pragma Import (C, cpShapePointQuery, "cpShapePointQuery");
+   pragma Import (C, PointQuery, "cpShapePointQuery");
 
-   function cpShapeSegmentQuery (shape : cpShape; a : cpVect; b : cpVect; radius : cpFloat; info : cpSegmentQueryInfo) return cpBool;
+   function SegmentQuery (shape : cpShape; a : cpVect; b : cpVect; radius : cpFloat; info : cpSegmentQueryInfo) return cpBool;
    --  
-   pragma Import (C, cpShapeSegmentQuery, "cpShapeSegmentQuery");
+   pragma Import (C, SegmentQuery, "cpShapeSegmentQuery");
 
-   function cpShapesCollide (a : cpShape; b : cpShape) return cpContactPointSet;
+   function sCollide (a : cpShape; b : cpShape) return cpContactPointSet;
    --  
-   pragma Import (C, cpShapesCollide, "cpShapesCollide");
+   pragma Import (C, sCollide, "cpShapesCollide");
 
-   function cpShapeGetSpace (shape : cpShape) return cpSpace;
+   function GetSpace (shape : cpShape) return cpSpace;
    --  
-   pragma Import (C, cpShapeGetSpace, "cpShapeGetSpace");
+   pragma Import (C, GetSpace, "cpShapeGetSpace");
 
-   function cpShapeGetBody (shape : cpShape) return cpBody;
+   function GetBody (shape : cpShape) return cpBody;
    --  
-   pragma Import (C, cpShapeGetBody, "cpShapeGetBody");
+   pragma Import (C, GetBody, "cpShapeGetBody");
 
-   procedure cpShapeSetBody (shape : cpShape; body_p : cpBody);
+   procedure SetBody (shape : cpShape; body_p : cpBody);
    --  
-   pragma Import (C, cpShapeSetBody, "cpShapeSetBody");
+   pragma Import (C, SetBody, "cpShapeSetBody");
 
-   function cpShapeGetMass (shape : cpShape) return cpFloat;
+   function GetMass (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpShapeGetMass, "cpShapeGetMass");
+   pragma Import (C, GetMass, "cpShapeGetMass");
 
-   procedure cpShapeSetMass (shape : cpShape; mass : cpFloat);
+   procedure SetMass (shape : cpShape; mass : cpFloat);
    --  
-   pragma Import (C, cpShapeSetMass, "cpShapeSetMass");
+   pragma Import (C, SetMass, "cpShapeSetMass");
 
-   function cpShapeGetDensity (shape : cpShape) return cpFloat;
+   function GetDensity (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpShapeGetDensity, "cpShapeGetDensity");
+   pragma Import (C, GetDensity, "cpShapeGetDensity");
 
-   procedure cpShapeSetDensity (shape : cpShape; density : cpFloat);
+   procedure SetDensity (shape : cpShape; density : cpFloat);
    --  
-   pragma Import (C, cpShapeSetDensity, "cpShapeSetDensity");
+   pragma Import (C, SetDensity, "cpShapeSetDensity");
 
-   function cpShapeGetMoment (shape : cpShape) return cpFloat;
+   function GetMoment (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpShapeGetMoment, "cpShapeGetMoment");
+   pragma Import (C, GetMoment, "cpShapeGetMoment");
 
-   function cpShapeGetArea (shape : cpShape) return cpFloat;
+   function GetArea (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpShapeGetArea, "cpShapeGetArea");
+   pragma Import (C, GetArea, "cpShapeGetArea");
 
-   function cpShapeGetCenterOfGravity (shape : cpShape) return cpVect;
+   function GetCenterOfGravity (shape : cpShape) return cpVect;
    --  
-   pragma Import (C, cpShapeGetCenterOfGravity, "cpShapeGetCenterOfGravity");
+   pragma Import (C, GetCenterOfGravity, "cpShapeGetCenterOfGravity");
 
-   function cpShapeGetBB (shape : cpShape) return cpBB;
+   function GetBB (shape : cpShape) return cpBB;
    --  
-   pragma Import (C, cpShapeGetBB, "cpShapeGetBB");
+   pragma Import (C, GetBB, "cpShapeGetBB");
 
-   function cpShapeGetSensor (shape : cpShape) return cpBool;
+   function GetSensor (shape : cpShape) return cpBool;
    --  
-   pragma Import (C, cpShapeGetSensor, "cpShapeGetSensor");
+   pragma Import (C, GetSensor, "cpShapeGetSensor");
 
-   procedure cpShapeSetSensor (shape : cpShape; sensor : cpBool);
+   procedure SetSensor (shape : cpShape; sensor : cpBool);
    --  
-   pragma Import (C, cpShapeSetSensor, "cpShapeSetSensor");
+   pragma Import (C, SetSensor, "cpShapeSetSensor");
 
-   function cpShapeGetElasticity (shape : cpShape) return cpFloat;
+   function GetElasticity (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpShapeGetElasticity, "cpShapeGetElasticity");
+   pragma Import (C, GetElasticity, "cpShapeGetElasticity");
 
-   procedure cpShapeSetElasticity (shape : cpShape; elasticity : cpFloat);
+   procedure SetElasticity (shape : cpShape; elasticity : cpFloat);
    --  
-   pragma Import (C, cpShapeSetElasticity, "cpShapeSetElasticity");
+   pragma Import (C, SetElasticity, "cpShapeSetElasticity");
 
-   function cpShapeGetFriction (shape : cpShape) return cpFloat;
+   function GetFriction (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpShapeGetFriction, "cpShapeGetFriction");
+   pragma Import (C, GetFriction, "cpShapeGetFriction");
 
-   procedure cpShapeSetFriction (shape : cpShape; friction : cpFloat);
+   procedure SetFriction (shape : cpShape; friction : cpFloat);
    --  
-   pragma Import (C, cpShapeSetFriction, "cpShapeSetFriction");
+   pragma Import (C, SetFriction, "cpShapeSetFriction");
 
-   function cpShapeGetSurfaceVelocity (shape : cpShape) return cpVect;
+   function GetSurfaceVelocity (shape : cpShape) return cpVect;
    --  
-   pragma Import (C, cpShapeGetSurfaceVelocity, "cpShapeGetSurfaceVelocity");
+   pragma Import (C, GetSurfaceVelocity, "cpShapeGetSurfaceVelocity");
 
-   procedure cpShapeSetSurfaceVelocity (shape : cpShape; surfaceVelocity : cpVect);
+   procedure SetSurfaceVelocity (shape : cpShape; surfaceVelocity : cpVect);
    --  
-   pragma Import (C, cpShapeSetSurfaceVelocity, "cpShapeSetSurfaceVelocity");
+   pragma Import (C, SetSurfaceVelocity, "cpShapeSetSurfaceVelocity");
 
-   function cpShapeGetUserData (shape : cpShape) return cpDataPointer;
+   function GetUserData (shape : cpShape) return cpDataPointer;
    --  
-   pragma Import (C, cpShapeGetUserData, "cpShapeGetUserData");
+   pragma Import (C, GetUserData, "cpShapeGetUserData");
 
-   procedure cpShapeSetUserData (shape : cpShape; userData : cpDataPointer);
+   procedure SetUserData (shape : cpShape; userData : cpDataPointer);
    --  
-   pragma Import (C, cpShapeSetUserData, "cpShapeSetUserData");
+   pragma Import (C, SetUserData, "cpShapeSetUserData");
 
-   function cpShapeGetCollisionType (shape : cpShape) return cpCollisionType;
+   function GetCollisionType (shape : cpShape) return cpCollisionType;
    --  
-   pragma Import (C, cpShapeGetCollisionType, "cpShapeGetCollisionType");
+   pragma Import (C, GetCollisionType, "cpShapeGetCollisionType");
 
-   procedure cpShapeSetCollisionType (shape : cpShape; collisionType : cpCollisionType);
+   procedure SetCollisionType (shape : cpShape; collisionType : cpCollisionType);
    --  
-   pragma Import (C, cpShapeSetCollisionType, "cpShapeSetCollisionType");
+   pragma Import (C, SetCollisionType, "cpShapeSetCollisionType");
 
-   function cpShapeGetFilter (shape : cpShape) return cpShapeFilter;
+   function GetFilter (shape : cpShape) return cpShapeFilter;
    --  
-   pragma Import (C, cpShapeGetFilter, "cpShapeGetFilter");
+   pragma Import (C, GetFilter, "cpShapeGetFilter");
 
-   procedure cpShapeSetFilter (shape : cpShape; filter : cpShapeFilter);
+   procedure SetFilter (shape : cpShape; filter : cpShapeFilter);
    --  
-   pragma Import (C, cpShapeSetFilter, "cpShapeSetFilter");
+   pragma Import (C, SetFilter, "cpShapeSetFilter");
 
    function cpCircleShapeAlloc return cpCircleShape;
    --  

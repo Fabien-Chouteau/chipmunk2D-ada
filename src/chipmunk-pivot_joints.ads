@@ -8,36 +8,36 @@ is
    --  
    pragma Import (C, cpConstraintIsPivotJoint, "cpConstraintIsPivotJoint");
 
-   function cpPivotJointAlloc return cpPivotJoint;
+   function Alloc return cpPivotJoint;
    --  
-   pragma Import (C, cpPivotJointAlloc, "cpPivotJointAlloc");
+   pragma Import (C, Alloc, "cpPivotJointAlloc");
 
-   function cpPivotJointInit (joint : cpPivotJoint; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpPivotJoint;
+   function Init (joint : cpPivotJoint; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpPivotJoint;
    --  
-   pragma Import (C, cpPivotJointInit, "cpPivotJointInit");
+   pragma Import (C, Init, "cpPivotJointInit");
 
-   function cpPivotJointNew (a : cpBody; b : cpBody; pivot : cpVect) return cpConstraint;
+   function NewPivotJoint (a : cpBody; b : cpBody; pivot : cpVect) return cpConstraint;
    --  
-   pragma Import (C, cpPivotJointNew, "cpPivotJointNew");
+   pragma Import (C, NewPivotJoint, "cpPivotJointNew");
 
-   function cpPivotJointNew2 (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpConstraint;
+   function New2PivotJoint (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpConstraint;
    --  
-   pragma Import (C, cpPivotJointNew2, "cpPivotJointNew2");
+   pragma Import (C, New2PivotJoint, "cpPivotJointNew2");
 
-   function cpPivotJointGetAnchorA (constraint : cpConstraint) return cpVect;
+   function GetAnchorA (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpPivotJointGetAnchorA, "cpPivotJointGetAnchorA");
+   pragma Import (C, GetAnchorA, "cpPivotJointGetAnchorA");
 
-   procedure cpPivotJointSetAnchorA (constraint : cpConstraint; anchorA : cpVect);
+   procedure SetAnchorA (constraint : cpConstraint; anchorA : cpVect);
    --  
-   pragma Import (C, cpPivotJointSetAnchorA, "cpPivotJointSetAnchorA");
+   pragma Import (C, SetAnchorA, "cpPivotJointSetAnchorA");
 
-   function cpPivotJointGetAnchorB (constraint : cpConstraint) return cpVect;
+   function GetAnchorB (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpPivotJointGetAnchorB, "cpPivotJointGetAnchorB");
+   pragma Import (C, GetAnchorB, "cpPivotJointGetAnchorB");
 
-   procedure cpPivotJointSetAnchorB (constraint : cpConstraint; anchorB : cpVect);
+   procedure SetAnchorB (constraint : cpConstraint; anchorB : cpVect);
    --  
-   pragma Import (C, cpPivotJointSetAnchorB, "cpPivotJointSetAnchorB");
+   pragma Import (C, SetAnchorB, "cpPivotJointSetAnchorB");
 
 end Chipmunk.Pivot_Joints;

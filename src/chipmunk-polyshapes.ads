@@ -4,25 +4,25 @@ package Chipmunk.PolyShapes
   with Preelaborate
 is
    pragma Style_Checks ("M2000");
-   function cpPolyShapeAlloc return cpPolyShape;
+   function Alloc return cpPolyShape;
    --  
-   pragma Import (C, cpPolyShapeAlloc, "cpPolyShapeAlloc");
+   pragma Import (C, Alloc, "cpPolyShapeAlloc");
 
-   function cpPolyShapeInit (poly : cpPolyShape; body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; transform : cpTransform; radius : cpFloat) return cpPolyShape;
+   function Init (poly : cpPolyShape; body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; transform : cpTransform; radius : cpFloat) return cpPolyShape;
    --  
-   pragma Import (C, cpPolyShapeInit, "cpPolyShapeInit");
+   pragma Import (C, Init, "cpPolyShapeInit");
 
-   function cpPolyShapeInitRaw (poly : cpPolyShape; body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; radius : cpFloat) return cpPolyShape;
+   function InitRaw (poly : cpPolyShape; body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; radius : cpFloat) return cpPolyShape;
    --  
-   pragma Import (C, cpPolyShapeInitRaw, "cpPolyShapeInitRaw");
+   pragma Import (C, InitRaw, "cpPolyShapeInitRaw");
 
-   function cpPolyShapeNew (body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; transform : cpTransform; radius : cpFloat) return cpShape;
+   function NewPolyShape (body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; transform : cpTransform; radius : cpFloat) return cpShape;
    --  
-   pragma Import (C, cpPolyShapeNew, "cpPolyShapeNew");
+   pragma Import (C, NewPolyShape, "cpPolyShapeNew");
 
-   function cpPolyShapeNewRaw (body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; radius : cpFloat) return cpShape;
+   function NewRaw (body_p : cpBody; count : Interfaces.C.int; verts : access C_cpVect_Array; radius : cpFloat) return cpShape;
    --  
-   pragma Import (C, cpPolyShapeNewRaw, "cpPolyShapeNewRaw");
+   pragma Import (C, NewRaw, "cpPolyShapeNewRaw");
 
    function cpBoxShapeInit (poly : cpPolyShape; body_p : cpBody; width : cpFloat; height : cpFloat; radius : cpFloat) return cpPolyShape;
    --  
@@ -40,16 +40,16 @@ is
    --  
    pragma Import (C, cpBoxShapeNew2, "cpBoxShapeNew2");
 
-   function cpPolyShapeGetCount (shape : cpShape) return Interfaces.C.int;
+   function GetCount (shape : cpShape) return Interfaces.C.int;
    --  
-   pragma Import (C, cpPolyShapeGetCount, "cpPolyShapeGetCount");
+   pragma Import (C, GetCount, "cpPolyShapeGetCount");
 
-   function cpPolyShapeGetVert (shape : cpShape; index : Interfaces.C.int) return cpVect;
+   function GetVert (shape : cpShape; index : Interfaces.C.int) return cpVect;
    --  
-   pragma Import (C, cpPolyShapeGetVert, "cpPolyShapeGetVert");
+   pragma Import (C, GetVert, "cpPolyShapeGetVert");
 
-   function cpPolyShapeGetRadius (shape : cpShape) return cpFloat;
+   function GetRadius (shape : cpShape) return cpFloat;
    --  
-   pragma Import (C, cpPolyShapeGetRadius, "cpPolyShapeGetRadius");
+   pragma Import (C, GetRadius, "cpPolyShapeGetRadius");
 
 end Chipmunk.PolyShapes;

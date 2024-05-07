@@ -8,40 +8,40 @@ is
    --  
    pragma Import (C, cpConstraintIsRatchetJoint, "cpConstraintIsRatchetJoint");
 
-   function cpRatchetJointAlloc return cpRatchetJoint;
+   function Alloc return cpRatchetJoint;
    --  
-   pragma Import (C, cpRatchetJointAlloc, "cpRatchetJointAlloc");
+   pragma Import (C, Alloc, "cpRatchetJointAlloc");
 
-   function cpRatchetJointInit (joint : cpRatchetJoint; a : cpBody; b : cpBody; phase : cpFloat; ratchet : cpFloat) return cpRatchetJoint;
+   function Init (joint : cpRatchetJoint; a : cpBody; b : cpBody; phase : cpFloat; ratchet : cpFloat) return cpRatchetJoint;
    --  
-   pragma Import (C, cpRatchetJointInit, "cpRatchetJointInit");
+   pragma Import (C, Init, "cpRatchetJointInit");
 
-   function cpRatchetJointNew (a : cpBody; b : cpBody; phase : cpFloat; ratchet : cpFloat) return cpConstraint;
+   function NewRatchetJoint (a : cpBody; b : cpBody; phase : cpFloat; ratchet : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpRatchetJointNew, "cpRatchetJointNew");
+   pragma Import (C, NewRatchetJoint, "cpRatchetJointNew");
 
-   function cpRatchetJointGetAngle (constraint : cpConstraint) return cpFloat;
+   function GetAngle (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpRatchetJointGetAngle, "cpRatchetJointGetAngle");
+   pragma Import (C, GetAngle, "cpRatchetJointGetAngle");
 
-   procedure cpRatchetJointSetAngle (constraint : cpConstraint; angle : cpFloat);
+   procedure SetAngle (constraint : cpConstraint; angle : cpFloat);
    --  
-   pragma Import (C, cpRatchetJointSetAngle, "cpRatchetJointSetAngle");
+   pragma Import (C, SetAngle, "cpRatchetJointSetAngle");
 
-   function cpRatchetJointGetPhase (constraint : cpConstraint) return cpFloat;
+   function GetPhase (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpRatchetJointGetPhase, "cpRatchetJointGetPhase");
+   pragma Import (C, GetPhase, "cpRatchetJointGetPhase");
 
-   procedure cpRatchetJointSetPhase (constraint : cpConstraint; phase : cpFloat);
+   procedure SetPhase (constraint : cpConstraint; phase : cpFloat);
    --  
-   pragma Import (C, cpRatchetJointSetPhase, "cpRatchetJointSetPhase");
+   pragma Import (C, SetPhase, "cpRatchetJointSetPhase");
 
-   function cpRatchetJointGetRatchet (constraint : cpConstraint) return cpFloat;
+   function GetRatchet (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpRatchetJointGetRatchet, "cpRatchetJointGetRatchet");
+   pragma Import (C, GetRatchet, "cpRatchetJointGetRatchet");
 
-   procedure cpRatchetJointSetRatchet (constraint : cpConstraint; ratchet : cpFloat);
+   procedure SetRatchet (constraint : cpConstraint; ratchet : cpFloat);
    --  
-   pragma Import (C, cpRatchetJointSetRatchet, "cpRatchetJointSetRatchet");
+   pragma Import (C, SetRatchet, "cpRatchetJointSetRatchet");
 
 end Chipmunk.Ratchet_Joints;

@@ -24,212 +24,212 @@ is
 
      with Convention => C;
 
-   function cpBodyAlloc return cpBody;
+   function Alloc return cpBody;
    --  
-   pragma Import (C, cpBodyAlloc, "cpBodyAlloc");
+   pragma Import (C, Alloc, "cpBodyAlloc");
 
-   function cpBodyInit (body_p : cpBody; mass : cpFloat; moment : cpFloat) return cpBody;
+   function Init (body_p : cpBody; mass : cpFloat; moment : cpFloat) return cpBody;
    --  
-   pragma Import (C, cpBodyInit, "cpBodyInit");
+   pragma Import (C, Init, "cpBodyInit");
 
-   function cpBodyNew (mass : cpFloat; moment : cpFloat) return cpBody;
+   function NewBody (mass : cpFloat; moment : cpFloat) return cpBody;
    --  
-   pragma Import (C, cpBodyNew, "cpBodyNew");
+   pragma Import (C, NewBody, "cpBodyNew");
 
-   function cpBodyNewKinematic return cpBody;
+   function NewKinematic return cpBody;
    --  
-   pragma Import (C, cpBodyNewKinematic, "cpBodyNewKinematic");
+   pragma Import (C, NewKinematic, "cpBodyNewKinematic");
 
-   function cpBodyNewStatic return cpBody;
+   function NewStatic return cpBody;
    --  
-   pragma Import (C, cpBodyNewStatic, "cpBodyNewStatic");
+   pragma Import (C, NewStatic, "cpBodyNewStatic");
 
-   procedure cpBodyDestroy (body_p : cpBody);
+   procedure Destroy (body_p : cpBody);
    --  
-   pragma Import (C, cpBodyDestroy, "cpBodyDestroy");
+   pragma Import (C, Destroy, "cpBodyDestroy");
 
-   procedure cpBodyFree (body_p : cpBody);
+   procedure Free (body_p : cpBody);
    --  
-   pragma Import (C, cpBodyFree, "cpBodyFree");
+   pragma Import (C, Free, "cpBodyFree");
 
-   procedure cpBodyActivate (body_p : cpBody);
+   procedure Activate (body_p : cpBody);
    --  
-   pragma Import (C, cpBodyActivate, "cpBodyActivate");
+   pragma Import (C, Activate, "cpBodyActivate");
 
-   procedure cpBodyActivateStatic (body_p : cpBody; filter : cpShape);
+   procedure ActivateStatic (body_p : cpBody; filter : cpShape);
    --  
-   pragma Import (C, cpBodyActivateStatic, "cpBodyActivateStatic");
+   pragma Import (C, ActivateStatic, "cpBodyActivateStatic");
 
-   procedure cpBodySleep (body_p : cpBody);
+   procedure Sleep (body_p : cpBody);
    --  
-   pragma Import (C, cpBodySleep, "cpBodySleep");
+   pragma Import (C, Sleep, "cpBodySleep");
 
-   procedure cpBodySleepWithGroup (body_p : cpBody; group : cpBody);
+   procedure SleepWithGroup (body_p : cpBody; group : cpBody);
    --  
-   pragma Import (C, cpBodySleepWithGroup, "cpBodySleepWithGroup");
+   pragma Import (C, SleepWithGroup, "cpBodySleepWithGroup");
 
-   function cpBodyIsSleeping (body_p : cpBody) return cpBool;
+   function IsSleeping (body_p : cpBody) return cpBool;
    --  
-   pragma Import (C, cpBodyIsSleeping, "cpBodyIsSleeping");
+   pragma Import (C, IsSleeping, "cpBodyIsSleeping");
 
-   function cpBodyGetType (body_p : cpBody) return cpBodyType;
+   function GetType (body_p : cpBody) return cpBodyType;
    --  
-   pragma Import (C, cpBodyGetType, "cpBodyGetType");
+   pragma Import (C, GetType, "cpBodyGetType");
 
-   procedure cpBodySetType (body_p : cpBody; type_p : cpBodyType);
+   procedure SetType (body_p : cpBody; type_p : cpBodyType);
    --  
-   pragma Import (C, cpBodySetType, "cpBodySetType");
+   pragma Import (C, SetType, "cpBodySetType");
 
-   function cpBodyGetSpace (body_p : cpBody) return cpSpace;
+   function GetSpace (body_p : cpBody) return cpSpace;
    --  
-   pragma Import (C, cpBodyGetSpace, "cpBodyGetSpace");
+   pragma Import (C, GetSpace, "cpBodyGetSpace");
 
-   function cpBodyGetMass (body_p : cpBody) return cpFloat;
+   function GetMass (body_p : cpBody) return cpFloat;
    --  
-   pragma Import (C, cpBodyGetMass, "cpBodyGetMass");
+   pragma Import (C, GetMass, "cpBodyGetMass");
 
-   procedure cpBodySetMass (body_p : cpBody; m : cpFloat);
+   procedure SetMass (body_p : cpBody; m : cpFloat);
    --  
-   pragma Import (C, cpBodySetMass, "cpBodySetMass");
+   pragma Import (C, SetMass, "cpBodySetMass");
 
-   function cpBodyGetMoment (body_p : cpBody) return cpFloat;
+   function GetMoment (body_p : cpBody) return cpFloat;
    --  
-   pragma Import (C, cpBodyGetMoment, "cpBodyGetMoment");
+   pragma Import (C, GetMoment, "cpBodyGetMoment");
 
-   procedure cpBodySetMoment (body_p : cpBody; i : cpFloat);
+   procedure SetMoment (body_p : cpBody; i : cpFloat);
    --  
-   pragma Import (C, cpBodySetMoment, "cpBodySetMoment");
+   pragma Import (C, SetMoment, "cpBodySetMoment");
 
-   function cpBodyGetPosition (body_p : cpBody) return cpVect;
+   function GetPosition (body_p : cpBody) return cpVect;
    --  
-   pragma Import (C, cpBodyGetPosition, "cpBodyGetPosition");
+   pragma Import (C, GetPosition, "cpBodyGetPosition");
 
-   procedure cpBodySetPosition (body_p : cpBody; pos : cpVect);
+   procedure SetPosition (body_p : cpBody; pos : cpVect);
    --  
-   pragma Import (C, cpBodySetPosition, "cpBodySetPosition");
+   pragma Import (C, SetPosition, "cpBodySetPosition");
 
-   function cpBodyGetCenterOfGravity (body_p : cpBody) return cpVect;
+   function GetCenterOfGravity (body_p : cpBody) return cpVect;
    --  
-   pragma Import (C, cpBodyGetCenterOfGravity, "cpBodyGetCenterOfGravity");
+   pragma Import (C, GetCenterOfGravity, "cpBodyGetCenterOfGravity");
 
-   procedure cpBodySetCenterOfGravity (body_p : cpBody; cog : cpVect);
+   procedure SetCenterOfGravity (body_p : cpBody; cog : cpVect);
    --  
-   pragma Import (C, cpBodySetCenterOfGravity, "cpBodySetCenterOfGravity");
+   pragma Import (C, SetCenterOfGravity, "cpBodySetCenterOfGravity");
 
-   function cpBodyGetVelocity (body_p : cpBody) return cpVect;
+   function GetVelocity (body_p : cpBody) return cpVect;
    --  
-   pragma Import (C, cpBodyGetVelocity, "cpBodyGetVelocity");
+   pragma Import (C, GetVelocity, "cpBodyGetVelocity");
 
-   procedure cpBodySetVelocity (body_p : cpBody; velocity : cpVect);
+   procedure SetVelocity (body_p : cpBody; velocity : cpVect);
    --  
-   pragma Import (C, cpBodySetVelocity, "cpBodySetVelocity");
+   pragma Import (C, SetVelocity, "cpBodySetVelocity");
 
-   function cpBodyGetForce (body_p : cpBody) return cpVect;
+   function GetForce (body_p : cpBody) return cpVect;
    --  
-   pragma Import (C, cpBodyGetForce, "cpBodyGetForce");
+   pragma Import (C, GetForce, "cpBodyGetForce");
 
-   procedure cpBodySetForce (body_p : cpBody; force : cpVect);
+   procedure SetForce (body_p : cpBody; force : cpVect);
    --  
-   pragma Import (C, cpBodySetForce, "cpBodySetForce");
+   pragma Import (C, SetForce, "cpBodySetForce");
 
-   function cpBodyGetAngle (body_p : cpBody) return cpFloat;
+   function GetAngle (body_p : cpBody) return cpFloat;
    --  
-   pragma Import (C, cpBodyGetAngle, "cpBodyGetAngle");
+   pragma Import (C, GetAngle, "cpBodyGetAngle");
 
-   procedure cpBodySetAngle (body_p : cpBody; a : cpFloat);
+   procedure SetAngle (body_p : cpBody; a : cpFloat);
    --  
-   pragma Import (C, cpBodySetAngle, "cpBodySetAngle");
+   pragma Import (C, SetAngle, "cpBodySetAngle");
 
-   function cpBodyGetAngularVelocity (body_p : cpBody) return cpFloat;
+   function GetAngularVelocity (body_p : cpBody) return cpFloat;
    --  
-   pragma Import (C, cpBodyGetAngularVelocity, "cpBodyGetAngularVelocity");
+   pragma Import (C, GetAngularVelocity, "cpBodyGetAngularVelocity");
 
-   procedure cpBodySetAngularVelocity (body_p : cpBody; angularVelocity : cpFloat);
+   procedure SetAngularVelocity (body_p : cpBody; angularVelocity : cpFloat);
    --  
-   pragma Import (C, cpBodySetAngularVelocity, "cpBodySetAngularVelocity");
+   pragma Import (C, SetAngularVelocity, "cpBodySetAngularVelocity");
 
-   function cpBodyGetTorque (body_p : cpBody) return cpFloat;
+   function GetTorque (body_p : cpBody) return cpFloat;
    --  
-   pragma Import (C, cpBodyGetTorque, "cpBodyGetTorque");
+   pragma Import (C, GetTorque, "cpBodyGetTorque");
 
-   procedure cpBodySetTorque (body_p : cpBody; torque : cpFloat);
+   procedure SetTorque (body_p : cpBody; torque : cpFloat);
    --  
-   pragma Import (C, cpBodySetTorque, "cpBodySetTorque");
+   pragma Import (C, SetTorque, "cpBodySetTorque");
 
-   function cpBodyGetRotation (body_p : cpBody) return cpVect;
+   function GetRotation (body_p : cpBody) return cpVect;
    --  
-   pragma Import (C, cpBodyGetRotation, "cpBodyGetRotation");
+   pragma Import (C, GetRotation, "cpBodyGetRotation");
 
-   function cpBodyGetUserData (body_p : cpBody) return cpDataPointer;
+   function GetUserData (body_p : cpBody) return cpDataPointer;
    --  
-   pragma Import (C, cpBodyGetUserData, "cpBodyGetUserData");
+   pragma Import (C, GetUserData, "cpBodyGetUserData");
 
-   procedure cpBodySetUserData (body_p : cpBody; userData : cpDataPointer);
+   procedure SetUserData (body_p : cpBody; userData : cpDataPointer);
    --  
-   pragma Import (C, cpBodySetUserData, "cpBodySetUserData");
+   pragma Import (C, SetUserData, "cpBodySetUserData");
 
-   procedure cpBodySetVelocityUpdateFunc (body_p : cpBody; velocityFunc : cpBodyVelocityFunc);
+   procedure SetVelocityUpdateFunc (body_p : cpBody; velocityFunc : cpBodyVelocityFunc);
    --  
-   pragma Import (C, cpBodySetVelocityUpdateFunc, "cpBodySetVelocityUpdateFunc");
+   pragma Import (C, SetVelocityUpdateFunc, "cpBodySetVelocityUpdateFunc");
 
-   procedure cpBodySetPositionUpdateFunc (body_p : cpBody; positionFunc : cpBodyPositionFunc);
+   procedure SetPositionUpdateFunc (body_p : cpBody; positionFunc : cpBodyPositionFunc);
    --  
-   pragma Import (C, cpBodySetPositionUpdateFunc, "cpBodySetPositionUpdateFunc");
+   pragma Import (C, SetPositionUpdateFunc, "cpBodySetPositionUpdateFunc");
 
-   procedure cpBodyUpdateVelocity (body_p : cpBody; gravity : cpVect; damping : cpFloat; dt : cpFloat);
+   procedure UpdateVelocity (body_p : cpBody; gravity : cpVect; damping : cpFloat; dt : cpFloat);
    --  
-   pragma Import (C, cpBodyUpdateVelocity, "cpBodyUpdateVelocity");
+   pragma Import (C, UpdateVelocity, "cpBodyUpdateVelocity");
 
-   procedure cpBodyUpdatePosition (body_p : cpBody; dt : cpFloat);
+   procedure UpdatePosition (body_p : cpBody; dt : cpFloat);
    --  
-   pragma Import (C, cpBodyUpdatePosition, "cpBodyUpdatePosition");
+   pragma Import (C, UpdatePosition, "cpBodyUpdatePosition");
 
-   function cpBodyLocalToWorld (body_p : cpBody; point : cpVect) return cpVect;
+   function LocalToWorld (body_p : cpBody; point : cpVect) return cpVect;
    --  
-   pragma Import (C, cpBodyLocalToWorld, "cpBodyLocalToWorld");
+   pragma Import (C, LocalToWorld, "cpBodyLocalToWorld");
 
-   function cpBodyWorldToLocal (body_p : cpBody; point : cpVect) return cpVect;
+   function WorldToLocal (body_p : cpBody; point : cpVect) return cpVect;
    --  
-   pragma Import (C, cpBodyWorldToLocal, "cpBodyWorldToLocal");
+   pragma Import (C, WorldToLocal, "cpBodyWorldToLocal");
 
-   procedure cpBodyApplyForceAtWorldPoint (body_p : cpBody; force : cpVect; point : cpVect);
+   procedure ApplyForceAtWorldPoint (body_p : cpBody; force : cpVect; point : cpVect);
    --  
-   pragma Import (C, cpBodyApplyForceAtWorldPoint, "cpBodyApplyForceAtWorldPoint");
+   pragma Import (C, ApplyForceAtWorldPoint, "cpBodyApplyForceAtWorldPoint");
 
-   procedure cpBodyApplyForceAtLocalPoint (body_p : cpBody; force : cpVect; point : cpVect);
+   procedure ApplyForceAtLocalPoint (body_p : cpBody; force : cpVect; point : cpVect);
    --  
-   pragma Import (C, cpBodyApplyForceAtLocalPoint, "cpBodyApplyForceAtLocalPoint");
+   pragma Import (C, ApplyForceAtLocalPoint, "cpBodyApplyForceAtLocalPoint");
 
-   procedure cpBodyApplyImpulseAtWorldPoint (body_p : cpBody; impulse : cpVect; point : cpVect);
+   procedure ApplyImpulseAtWorldPoint (body_p : cpBody; impulse : cpVect; point : cpVect);
    --  
-   pragma Import (C, cpBodyApplyImpulseAtWorldPoint, "cpBodyApplyImpulseAtWorldPoint");
+   pragma Import (C, ApplyImpulseAtWorldPoint, "cpBodyApplyImpulseAtWorldPoint");
 
-   procedure cpBodyApplyImpulseAtLocalPoint (body_p : cpBody; impulse : cpVect; point : cpVect);
+   procedure ApplyImpulseAtLocalPoint (body_p : cpBody; impulse : cpVect; point : cpVect);
    --  
-   pragma Import (C, cpBodyApplyImpulseAtLocalPoint, "cpBodyApplyImpulseAtLocalPoint");
+   pragma Import (C, ApplyImpulseAtLocalPoint, "cpBodyApplyImpulseAtLocalPoint");
 
-   function cpBodyGetVelocityAtWorldPoint (body_p : cpBody; point : cpVect) return cpVect;
+   function GetVelocityAtWorldPoint (body_p : cpBody; point : cpVect) return cpVect;
    --  
-   pragma Import (C, cpBodyGetVelocityAtWorldPoint, "cpBodyGetVelocityAtWorldPoint");
+   pragma Import (C, GetVelocityAtWorldPoint, "cpBodyGetVelocityAtWorldPoint");
 
-   function cpBodyGetVelocityAtLocalPoint (body_p : cpBody; point : cpVect) return cpVect;
+   function GetVelocityAtLocalPoint (body_p : cpBody; point : cpVect) return cpVect;
    --  
-   pragma Import (C, cpBodyGetVelocityAtLocalPoint, "cpBodyGetVelocityAtLocalPoint");
+   pragma Import (C, GetVelocityAtLocalPoint, "cpBodyGetVelocityAtLocalPoint");
 
-   function cpBodyKineticEnergy (body_p : cpBody) return cpFloat;
+   function KineticEnergy (body_p : cpBody) return cpFloat;
    --  
-   pragma Import (C, cpBodyKineticEnergy, "cpBodyKineticEnergy");
+   pragma Import (C, KineticEnergy, "cpBodyKineticEnergy");
 
-   procedure cpBodyEachShape (body_p : cpBody; func : cpBodyShapeIteratorFunc; data : System.Address);
+   procedure EachShape (body_p : cpBody; func : cpBodyShapeIteratorFunc; data : System.Address);
    --  
-   pragma Import (C, cpBodyEachShape, "cpBodyEachShape");
+   pragma Import (C, EachShape, "cpBodyEachShape");
 
-   procedure cpBodyEachConstraint (body_p : cpBody; func : cpBodyConstraintIteratorFunc; data : System.Address);
+   procedure EachConstraint (body_p : cpBody; func : cpBodyConstraintIteratorFunc; data : System.Address);
    --  
-   pragma Import (C, cpBodyEachConstraint, "cpBodyEachConstraint");
+   pragma Import (C, EachConstraint, "cpBodyEachConstraint");
 
-   procedure cpBodyEachArbiter (body_p : cpBody; func : cpBodyArbiterIteratorFunc; data : System.Address);
+   procedure EachArbiter (body_p : cpBody; func : cpBodyArbiterIteratorFunc; data : System.Address);
    --  
-   pragma Import (C, cpBodyEachArbiter, "cpBodyEachArbiter");
+   pragma Import (C, EachArbiter, "cpBodyEachArbiter");
 
 end Chipmunk.Bodies;

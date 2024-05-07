@@ -8,32 +8,32 @@ is
    --  
    pragma Import (C, cpConstraintIsGearJoint, "cpConstraintIsGearJoint");
 
-   function cpGearJointAlloc return cpGearJoint;
+   function tAlloc return cpGearJoint;
    --  
-   pragma Import (C, cpGearJointAlloc, "cpGearJointAlloc");
+   pragma Import (C, tAlloc, "cpGearJointAlloc");
 
-   function cpGearJointInit (joint : cpGearJoint; a : cpBody; b : cpBody; phase : cpFloat; ratio : cpFloat) return cpGearJoint;
+   function tInit (joint : cpGearJoint; a : cpBody; b : cpBody; phase : cpFloat; ratio : cpFloat) return cpGearJoint;
    --  
-   pragma Import (C, cpGearJointInit, "cpGearJointInit");
+   pragma Import (C, tInit, "cpGearJointInit");
 
-   function cpGearJointNew (a : cpBody; b : cpBody; phase : cpFloat; ratio : cpFloat) return cpConstraint;
+   function tNew (a : cpBody; b : cpBody; phase : cpFloat; ratio : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpGearJointNew, "cpGearJointNew");
+   pragma Import (C, tNew, "cpGearJointNew");
 
-   function cpGearJointGetPhase (constraint : cpConstraint) return cpFloat;
+   function tGetPhase (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpGearJointGetPhase, "cpGearJointGetPhase");
+   pragma Import (C, tGetPhase, "cpGearJointGetPhase");
 
-   procedure cpGearJointSetPhase (constraint : cpConstraint; phase : cpFloat);
+   procedure tSetPhase (constraint : cpConstraint; phase : cpFloat);
    --  
-   pragma Import (C, cpGearJointSetPhase, "cpGearJointSetPhase");
+   pragma Import (C, tSetPhase, "cpGearJointSetPhase");
 
-   function cpGearJointGetRatio (constraint : cpConstraint) return cpFloat;
+   function tGetRatio (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpGearJointGetRatio, "cpGearJointGetRatio");
+   pragma Import (C, tGetRatio, "cpGearJointGetRatio");
 
-   procedure cpGearJointSetRatio (constraint : cpConstraint; ratio : cpFloat);
+   procedure tSetRatio (constraint : cpConstraint; ratio : cpFloat);
    --  
-   pragma Import (C, cpGearJointSetRatio, "cpGearJointSetRatio");
+   pragma Import (C, tSetRatio, "cpGearJointSetRatio");
 
 end Chipmunk.Gear_Joints;

@@ -12,48 +12,48 @@ is
    --  
    pragma Import (C, cpConstraintIsDampedRotarySpring, "cpConstraintIsDampedRotarySpring");
 
-   function cpDampedRotarySpringAlloc return cpDampedRotarySpring;
+   function Alloc return cpDampedRotarySpring;
    --  
-   pragma Import (C, cpDampedRotarySpringAlloc, "cpDampedRotarySpringAlloc");
+   pragma Import (C, Alloc, "cpDampedRotarySpringAlloc");
 
-   function cpDampedRotarySpringInit (joint : cpDampedRotarySpring; a : cpBody; b : cpBody; restAngle : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpDampedRotarySpring;
+   function Init (joint : cpDampedRotarySpring; a : cpBody; b : cpBody; restAngle : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpDampedRotarySpring;
    --  
-   pragma Import (C, cpDampedRotarySpringInit, "cpDampedRotarySpringInit");
+   pragma Import (C, Init, "cpDampedRotarySpringInit");
 
-   function cpDampedRotarySpringNew (a : cpBody; b : cpBody; restAngle : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpConstraint;
+   function NewDampedRotarySpring (a : cpBody; b : cpBody; restAngle : cpFloat; stiffness : cpFloat; damping : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpDampedRotarySpringNew, "cpDampedRotarySpringNew");
+   pragma Import (C, NewDampedRotarySpring, "cpDampedRotarySpringNew");
 
-   function cpDampedRotarySpringGetRestAngle (constraint : cpConstraint) return cpFloat;
+   function GetRestAngle (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpDampedRotarySpringGetRestAngle, "cpDampedRotarySpringGetRestAngle");
+   pragma Import (C, GetRestAngle, "cpDampedRotarySpringGetRestAngle");
 
-   procedure cpDampedRotarySpringSetRestAngle (constraint : cpConstraint; restAngle : cpFloat);
+   procedure SetRestAngle (constraint : cpConstraint; restAngle : cpFloat);
    --  
-   pragma Import (C, cpDampedRotarySpringSetRestAngle, "cpDampedRotarySpringSetRestAngle");
+   pragma Import (C, SetRestAngle, "cpDampedRotarySpringSetRestAngle");
 
-   function cpDampedRotarySpringGetStiffness (constraint : cpConstraint) return cpFloat;
+   function GetStiffness (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpDampedRotarySpringGetStiffness, "cpDampedRotarySpringGetStiffness");
+   pragma Import (C, GetStiffness, "cpDampedRotarySpringGetStiffness");
 
-   procedure cpDampedRotarySpringSetStiffness (constraint : cpConstraint; stiffness : cpFloat);
+   procedure SetStiffness (constraint : cpConstraint; stiffness : cpFloat);
    --  
-   pragma Import (C, cpDampedRotarySpringSetStiffness, "cpDampedRotarySpringSetStiffness");
+   pragma Import (C, SetStiffness, "cpDampedRotarySpringSetStiffness");
 
-   function cpDampedRotarySpringGetDamping (constraint : cpConstraint) return cpFloat;
+   function GetDamping (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpDampedRotarySpringGetDamping, "cpDampedRotarySpringGetDamping");
+   pragma Import (C, GetDamping, "cpDampedRotarySpringGetDamping");
 
-   procedure cpDampedRotarySpringSetDamping (constraint : cpConstraint; damping : cpFloat);
+   procedure SetDamping (constraint : cpConstraint; damping : cpFloat);
    --  
-   pragma Import (C, cpDampedRotarySpringSetDamping, "cpDampedRotarySpringSetDamping");
+   pragma Import (C, SetDamping, "cpDampedRotarySpringSetDamping");
 
-   function cpDampedRotarySpringGetSpringTorqueFunc (constraint : cpConstraint) return cpDampedRotarySpringTorqueFunc;
+   function GetSpringTorqueFunc (constraint : cpConstraint) return cpDampedRotarySpringTorqueFunc;
    --  
-   pragma Import (C, cpDampedRotarySpringGetSpringTorqueFunc, "cpDampedRotarySpringGetSpringTorqueFunc");
+   pragma Import (C, GetSpringTorqueFunc, "cpDampedRotarySpringGetSpringTorqueFunc");
 
-   procedure cpDampedRotarySpringSetSpringTorqueFunc (constraint : cpConstraint; springTorqueFunc : cpDampedRotarySpringTorqueFunc);
+   procedure SetSpringTorqueFunc (constraint : cpConstraint; springTorqueFunc : cpDampedRotarySpringTorqueFunc);
    --  
-   pragma Import (C, cpDampedRotarySpringSetSpringTorqueFunc, "cpDampedRotarySpringSetSpringTorqueFunc");
+   pragma Import (C, SetSpringTorqueFunc, "cpDampedRotarySpringSetSpringTorqueFunc");
 
 end Chipmunk.Damped_Rotary_Springs;

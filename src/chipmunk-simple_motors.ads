@@ -8,24 +8,24 @@ is
    --  
    pragma Import (C, cpConstraintIsSimpleMotor, "cpConstraintIsSimpleMotor");
 
-   function cpSimpleMotorAlloc return cpSimpleMotor;
+   function Alloc return cpSimpleMotor;
    --  
-   pragma Import (C, cpSimpleMotorAlloc, "cpSimpleMotorAlloc");
+   pragma Import (C, Alloc, "cpSimpleMotorAlloc");
 
-   function cpSimpleMotorInit (joint : cpSimpleMotor; a : cpBody; b : cpBody; rate : cpFloat) return cpSimpleMotor;
+   function Init (joint : cpSimpleMotor; a : cpBody; b : cpBody; rate : cpFloat) return cpSimpleMotor;
    --  
-   pragma Import (C, cpSimpleMotorInit, "cpSimpleMotorInit");
+   pragma Import (C, Init, "cpSimpleMotorInit");
 
-   function cpSimpleMotorNew (a : cpBody; b : cpBody; rate : cpFloat) return cpConstraint;
+   function NewSimpleMotor (a : cpBody; b : cpBody; rate : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpSimpleMotorNew, "cpSimpleMotorNew");
+   pragma Import (C, NewSimpleMotor, "cpSimpleMotorNew");
 
-   function cpSimpleMotorGetRate (constraint : cpConstraint) return cpFloat;
+   function GetRate (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpSimpleMotorGetRate, "cpSimpleMotorGetRate");
+   pragma Import (C, GetRate, "cpSimpleMotorGetRate");
 
-   procedure cpSimpleMotorSetRate (constraint : cpConstraint; rate : cpFloat);
+   procedure SetRate (constraint : cpConstraint; rate : cpFloat);
    --  
-   pragma Import (C, cpSimpleMotorSetRate, "cpSimpleMotorSetRate");
+   pragma Import (C, SetRate, "cpSimpleMotorSetRate");
 
 end Chipmunk.Simple_Motors;

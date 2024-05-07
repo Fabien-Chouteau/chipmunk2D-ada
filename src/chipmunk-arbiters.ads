@@ -4,125 +4,125 @@ package Chipmunk.Arbiters
   with Preelaborate
 is
    pragma Style_Checks ("M2000");
-   function cpArbiterGetRestitution (arb : cpArbiter) return cpFloat;
+   function GetRestitution (arb : cpArbiter) return cpFloat;
    --  
-   pragma Import (C, cpArbiterGetRestitution, "cpArbiterGetRestitution");
+   pragma Import (C, GetRestitution, "cpArbiterGetRestitution");
 
-   procedure cpArbiterSetRestitution (arb : cpArbiter; restitution : cpFloat);
+   procedure SetRestitution (arb : cpArbiter; restitution : cpFloat);
    --  
-   pragma Import (C, cpArbiterSetRestitution, "cpArbiterSetRestitution");
+   pragma Import (C, SetRestitution, "cpArbiterSetRestitution");
 
-   function cpArbiterGetFriction (arb : cpArbiter) return cpFloat;
+   function GetFriction (arb : cpArbiter) return cpFloat;
    --  
-   pragma Import (C, cpArbiterGetFriction, "cpArbiterGetFriction");
+   pragma Import (C, GetFriction, "cpArbiterGetFriction");
 
-   procedure cpArbiterSetFriction (arb : cpArbiter; friction : cpFloat);
+   procedure SetFriction (arb : cpArbiter; friction : cpFloat);
    --  
-   pragma Import (C, cpArbiterSetFriction, "cpArbiterSetFriction");
+   pragma Import (C, SetFriction, "cpArbiterSetFriction");
 
-   function cpArbiterGetSurfaceVelocity (arb : cpArbiter) return cpVect;
+   function GetSurfaceVelocity (arb : cpArbiter) return cpVect;
    --  
-   pragma Import (C, cpArbiterGetSurfaceVelocity, "cpArbiterGetSurfaceVelocity");
+   pragma Import (C, GetSurfaceVelocity, "cpArbiterGetSurfaceVelocity");
 
-   procedure cpArbiterSetSurfaceVelocity (arb : cpArbiter; vr : cpVect);
+   procedure SetSurfaceVelocity (arb : cpArbiter; vr : cpVect);
    --  
-   pragma Import (C, cpArbiterSetSurfaceVelocity, "cpArbiterSetSurfaceVelocity");
+   pragma Import (C, SetSurfaceVelocity, "cpArbiterSetSurfaceVelocity");
 
-   function cpArbiterGetUserData (arb : cpArbiter) return cpDataPointer;
+   function GetUserData (arb : cpArbiter) return cpDataPointer;
    --  
-   pragma Import (C, cpArbiterGetUserData, "cpArbiterGetUserData");
+   pragma Import (C, GetUserData, "cpArbiterGetUserData");
 
-   procedure cpArbiterSetUserData (arb : cpArbiter; userData : cpDataPointer);
+   procedure SetUserData (arb : cpArbiter; userData : cpDataPointer);
    --  
-   pragma Import (C, cpArbiterSetUserData, "cpArbiterSetUserData");
+   pragma Import (C, SetUserData, "cpArbiterSetUserData");
 
-   function cpArbiterTotalImpulse (arb : cpArbiter) return cpVect;
+   function TotalImpulse (arb : cpArbiter) return cpVect;
    --  
-   pragma Import (C, cpArbiterTotalImpulse, "cpArbiterTotalImpulse");
+   pragma Import (C, TotalImpulse, "cpArbiterTotalImpulse");
 
-   function cpArbiterTotalKE (arb : cpArbiter) return cpFloat;
+   function TotalKE (arb : cpArbiter) return cpFloat;
    --  
-   pragma Import (C, cpArbiterTotalKE, "cpArbiterTotalKE");
+   pragma Import (C, TotalKE, "cpArbiterTotalKE");
 
-   function cpArbiterIgnore (arb : cpArbiter) return cpBool;
+   function Ignore (arb : cpArbiter) return cpBool;
    --  
-   pragma Import (C, cpArbiterIgnore, "cpArbiterIgnore");
+   pragma Import (C, Ignore, "cpArbiterIgnore");
 
-   procedure cpArbiterGetShapes (arb : cpArbiter; a : access cpShape; b : access cpShape);
+   procedure GetShapes (arb : cpArbiter; a : access cpShape; b : access cpShape);
    --  
-   pragma Import (C, cpArbiterGetShapes, "cpArbiterGetShapes");
+   pragma Import (C, GetShapes, "cpArbiterGetShapes");
 
-   procedure cpArbiterGetBodies (arb : cpArbiter; a : access cpBody; b : access cpBody);
+   procedure GetBodies (arb : cpArbiter; a : access cpBody; b : access cpBody);
    --  
-   pragma Import (C, cpArbiterGetBodies, "cpArbiterGetBodies");
+   pragma Import (C, GetBodies, "cpArbiterGetBodies");
 
-   function cpArbiterGetContactPointSet (arb : cpArbiter) return cpContactPointSet;
+   function GetContactPointSet (arb : cpArbiter) return cpContactPointSet;
    --  
-   pragma Import (C, cpArbiterGetContactPointSet, "cpArbiterGetContactPointSet");
+   pragma Import (C, GetContactPointSet, "cpArbiterGetContactPointSet");
 
-   procedure cpArbiterSetContactPointSet (arb : cpArbiter; set : access cpContactPointSet);
+   procedure SetContactPointSet (arb : cpArbiter; set : access cpContactPointSet);
    --  
-   pragma Import (C, cpArbiterSetContactPointSet, "cpArbiterSetContactPointSet");
+   pragma Import (C, SetContactPointSet, "cpArbiterSetContactPointSet");
 
-   function cpArbiterIsFirstContact (arb : cpArbiter) return cpBool;
+   function IsFirstContact (arb : cpArbiter) return cpBool;
    --  
-   pragma Import (C, cpArbiterIsFirstContact, "cpArbiterIsFirstContact");
+   pragma Import (C, IsFirstContact, "cpArbiterIsFirstContact");
 
-   function cpArbiterIsRemoval (arb : cpArbiter) return cpBool;
+   function IsRemoval (arb : cpArbiter) return cpBool;
    --  
-   pragma Import (C, cpArbiterIsRemoval, "cpArbiterIsRemoval");
+   pragma Import (C, IsRemoval, "cpArbiterIsRemoval");
 
-   function cpArbiterGetCount (arb : cpArbiter) return Interfaces.C.int;
+   function GetCount (arb : cpArbiter) return Interfaces.C.int;
    --  
-   pragma Import (C, cpArbiterGetCount, "cpArbiterGetCount");
+   pragma Import (C, GetCount, "cpArbiterGetCount");
 
-   function cpArbiterGetNormal (arb : cpArbiter) return cpVect;
+   function GetNormal (arb : cpArbiter) return cpVect;
    --  
-   pragma Import (C, cpArbiterGetNormal, "cpArbiterGetNormal");
+   pragma Import (C, GetNormal, "cpArbiterGetNormal");
 
-   function cpArbiterGetPointA (arb : cpArbiter; i : Interfaces.C.int) return cpVect;
+   function GetPointA (arb : cpArbiter; i : Interfaces.C.int) return cpVect;
    --  
-   pragma Import (C, cpArbiterGetPointA, "cpArbiterGetPointA");
+   pragma Import (C, GetPointA, "cpArbiterGetPointA");
 
-   function cpArbiterGetPointB (arb : cpArbiter; i : Interfaces.C.int) return cpVect;
+   function GetPointB (arb : cpArbiter; i : Interfaces.C.int) return cpVect;
    --  
-   pragma Import (C, cpArbiterGetPointB, "cpArbiterGetPointB");
+   pragma Import (C, GetPointB, "cpArbiterGetPointB");
 
-   function cpArbiterGetDepth (arb : cpArbiter; i : Interfaces.C.int) return cpFloat;
+   function GetDepth (arb : cpArbiter; i : Interfaces.C.int) return cpFloat;
    --  
-   pragma Import (C, cpArbiterGetDepth, "cpArbiterGetDepth");
+   pragma Import (C, GetDepth, "cpArbiterGetDepth");
 
-   function cpArbiterCallWildcardBeginA (arb : cpArbiter; space : cpSpace) return cpBool;
+   function CallWildcardBeginA (arb : cpArbiter; space : cpSpace) return cpBool;
    --  
-   pragma Import (C, cpArbiterCallWildcardBeginA, "cpArbiterCallWildcardBeginA");
+   pragma Import (C, CallWildcardBeginA, "cpArbiterCallWildcardBeginA");
 
-   function cpArbiterCallWildcardBeginB (arb : cpArbiter; space : cpSpace) return cpBool;
+   function CallWildcardBeginB (arb : cpArbiter; space : cpSpace) return cpBool;
    --  
-   pragma Import (C, cpArbiterCallWildcardBeginB, "cpArbiterCallWildcardBeginB");
+   pragma Import (C, CallWildcardBeginB, "cpArbiterCallWildcardBeginB");
 
-   function cpArbiterCallWildcardPreSolveA (arb : cpArbiter; space : cpSpace) return cpBool;
+   function CallWildcardPreSolveA (arb : cpArbiter; space : cpSpace) return cpBool;
    --  
-   pragma Import (C, cpArbiterCallWildcardPreSolveA, "cpArbiterCallWildcardPreSolveA");
+   pragma Import (C, CallWildcardPreSolveA, "cpArbiterCallWildcardPreSolveA");
 
-   function cpArbiterCallWildcardPreSolveB (arb : cpArbiter; space : cpSpace) return cpBool;
+   function CallWildcardPreSolveB (arb : cpArbiter; space : cpSpace) return cpBool;
    --  
-   pragma Import (C, cpArbiterCallWildcardPreSolveB, "cpArbiterCallWildcardPreSolveB");
+   pragma Import (C, CallWildcardPreSolveB, "cpArbiterCallWildcardPreSolveB");
 
-   procedure cpArbiterCallWildcardPostSolveA (arb : cpArbiter; space : cpSpace);
+   procedure CallWildcardPostSolveA (arb : cpArbiter; space : cpSpace);
    --  
-   pragma Import (C, cpArbiterCallWildcardPostSolveA, "cpArbiterCallWildcardPostSolveA");
+   pragma Import (C, CallWildcardPostSolveA, "cpArbiterCallWildcardPostSolveA");
 
-   procedure cpArbiterCallWildcardPostSolveB (arb : cpArbiter; space : cpSpace);
+   procedure CallWildcardPostSolveB (arb : cpArbiter; space : cpSpace);
    --  
-   pragma Import (C, cpArbiterCallWildcardPostSolveB, "cpArbiterCallWildcardPostSolveB");
+   pragma Import (C, CallWildcardPostSolveB, "cpArbiterCallWildcardPostSolveB");
 
-   procedure cpArbiterCallWildcardSeparateA (arb : cpArbiter; space : cpSpace);
+   procedure CallWildcardSeparateA (arb : cpArbiter; space : cpSpace);
    --  
-   pragma Import (C, cpArbiterCallWildcardSeparateA, "cpArbiterCallWildcardSeparateA");
+   pragma Import (C, CallWildcardSeparateA, "cpArbiterCallWildcardSeparateA");
 
-   procedure cpArbiterCallWildcardSeparateB (arb : cpArbiter; space : cpSpace);
+   procedure CallWildcardSeparateB (arb : cpArbiter; space : cpSpace);
    --  
-   pragma Import (C, cpArbiterCallWildcardSeparateB, "cpArbiterCallWildcardSeparateB");
+   pragma Import (C, CallWildcardSeparateB, "cpArbiterCallWildcardSeparateB");
 
    CP_MAX_CONTACTS_PER_ARBITER : constant := 2;
 end Chipmunk.Arbiters;

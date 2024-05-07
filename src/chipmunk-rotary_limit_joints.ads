@@ -8,32 +8,32 @@ is
    --  
    pragma Import (C, cpConstraintIsRotaryLimitJoint, "cpConstraintIsRotaryLimitJoint");
 
-   function cpRotaryLimitJointAlloc return cpRotaryLimitJoint;
+   function Alloc return cpRotaryLimitJoint;
    --  
-   pragma Import (C, cpRotaryLimitJointAlloc, "cpRotaryLimitJointAlloc");
+   pragma Import (C, Alloc, "cpRotaryLimitJointAlloc");
 
-   function cpRotaryLimitJointInit (joint : cpRotaryLimitJoint; a : cpBody; b : cpBody; min : cpFloat; max : cpFloat) return cpRotaryLimitJoint;
+   function Init (joint : cpRotaryLimitJoint; a : cpBody; b : cpBody; min : cpFloat; max : cpFloat) return cpRotaryLimitJoint;
    --  
-   pragma Import (C, cpRotaryLimitJointInit, "cpRotaryLimitJointInit");
+   pragma Import (C, Init, "cpRotaryLimitJointInit");
 
-   function cpRotaryLimitJointNew (a : cpBody; b : cpBody; min : cpFloat; max : cpFloat) return cpConstraint;
+   function NewRotaryLimitJoint (a : cpBody; b : cpBody; min : cpFloat; max : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpRotaryLimitJointNew, "cpRotaryLimitJointNew");
+   pragma Import (C, NewRotaryLimitJoint, "cpRotaryLimitJointNew");
 
-   function cpRotaryLimitJointGetMin (constraint : cpConstraint) return cpFloat;
+   function GetMin (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpRotaryLimitJointGetMin, "cpRotaryLimitJointGetMin");
+   pragma Import (C, GetMin, "cpRotaryLimitJointGetMin");
 
-   procedure cpRotaryLimitJointSetMin (constraint : cpConstraint; min : cpFloat);
+   procedure SetMin (constraint : cpConstraint; min : cpFloat);
    --  
-   pragma Import (C, cpRotaryLimitJointSetMin, "cpRotaryLimitJointSetMin");
+   pragma Import (C, SetMin, "cpRotaryLimitJointSetMin");
 
-   function cpRotaryLimitJointGetMax (constraint : cpConstraint) return cpFloat;
+   function GetMax (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpRotaryLimitJointGetMax, "cpRotaryLimitJointGetMax");
+   pragma Import (C, GetMax, "cpRotaryLimitJointGetMax");
 
-   procedure cpRotaryLimitJointSetMax (constraint : cpConstraint; max : cpFloat);
+   procedure SetMax (constraint : cpConstraint; max : cpFloat);
    --  
-   pragma Import (C, cpRotaryLimitJointSetMax, "cpRotaryLimitJointSetMax");
+   pragma Import (C, SetMax, "cpRotaryLimitJointSetMax");
 
 end Chipmunk.Rotary_Limit_Joints;

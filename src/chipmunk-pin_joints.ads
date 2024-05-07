@@ -8,40 +8,40 @@ is
    --  
    pragma Import (C, cpConstraintIsPinJoint, "cpConstraintIsPinJoint");
 
-   function cpPinJointAlloc return cpPinJoint;
+   function Alloc return cpPinJoint;
    --  
-   pragma Import (C, cpPinJointAlloc, "cpPinJointAlloc");
+   pragma Import (C, Alloc, "cpPinJointAlloc");
 
-   function cpPinJointInit (joint : cpPinJoint; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpPinJoint;
+   function Init (joint : cpPinJoint; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpPinJoint;
    --  
-   pragma Import (C, cpPinJointInit, "cpPinJointInit");
+   pragma Import (C, Init, "cpPinJointInit");
 
-   function cpPinJointNew (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpConstraint;
+   function NewPinJoint (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect) return cpConstraint;
    --  
-   pragma Import (C, cpPinJointNew, "cpPinJointNew");
+   pragma Import (C, NewPinJoint, "cpPinJointNew");
 
-   function cpPinJointGetAnchorA (constraint : cpConstraint) return cpVect;
+   function GetAnchorA (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpPinJointGetAnchorA, "cpPinJointGetAnchorA");
+   pragma Import (C, GetAnchorA, "cpPinJointGetAnchorA");
 
-   procedure cpPinJointSetAnchorA (constraint : cpConstraint; anchorA : cpVect);
+   procedure SetAnchorA (constraint : cpConstraint; anchorA : cpVect);
    --  
-   pragma Import (C, cpPinJointSetAnchorA, "cpPinJointSetAnchorA");
+   pragma Import (C, SetAnchorA, "cpPinJointSetAnchorA");
 
-   function cpPinJointGetAnchorB (constraint : cpConstraint) return cpVect;
+   function GetAnchorB (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpPinJointGetAnchorB, "cpPinJointGetAnchorB");
+   pragma Import (C, GetAnchorB, "cpPinJointGetAnchorB");
 
-   procedure cpPinJointSetAnchorB (constraint : cpConstraint; anchorB : cpVect);
+   procedure SetAnchorB (constraint : cpConstraint; anchorB : cpVect);
    --  
-   pragma Import (C, cpPinJointSetAnchorB, "cpPinJointSetAnchorB");
+   pragma Import (C, SetAnchorB, "cpPinJointSetAnchorB");
 
-   function cpPinJointGetDist (constraint : cpConstraint) return cpFloat;
+   function GetDist (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpPinJointGetDist, "cpPinJointGetDist");
+   pragma Import (C, GetDist, "cpPinJointGetDist");
 
-   procedure cpPinJointSetDist (constraint : cpConstraint; dist : cpFloat);
+   procedure SetDist (constraint : cpConstraint; dist : cpFloat);
    --  
-   pragma Import (C, cpPinJointSetDist, "cpPinJointSetDist");
+   pragma Import (C, SetDist, "cpPinJointSetDist");
 
 end Chipmunk.Pin_Joints;

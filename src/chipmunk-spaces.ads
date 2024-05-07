@@ -91,220 +91,220 @@ is
    end record
       with Convention => C_Pass_By_Copy;
 
-   function cpSpaceAlloc return cpSpace;
+   function Alloc return cpSpace;
    --  
-   pragma Import (C, cpSpaceAlloc, "cpSpaceAlloc");
+   pragma Import (C, Alloc, "cpSpaceAlloc");
 
-   function cpSpaceInit (space : cpSpace) return cpSpace;
+   function Init (space : cpSpace) return cpSpace;
    --  
-   pragma Import (C, cpSpaceInit, "cpSpaceInit");
+   pragma Import (C, Init, "cpSpaceInit");
 
-   function cpSpaceNew return cpSpace;
+   function NewSpace return cpSpace;
    --  
-   pragma Import (C, cpSpaceNew, "cpSpaceNew");
+   pragma Import (C, NewSpace, "cpSpaceNew");
 
-   procedure cpSpaceDestroy (space : cpSpace);
+   procedure Destroy (space : cpSpace);
    --  
-   pragma Import (C, cpSpaceDestroy, "cpSpaceDestroy");
+   pragma Import (C, Destroy, "cpSpaceDestroy");
 
-   procedure cpSpaceFree (space : cpSpace);
+   procedure Free (space : cpSpace);
    --  
-   pragma Import (C, cpSpaceFree, "cpSpaceFree");
+   pragma Import (C, Free, "cpSpaceFree");
 
-   function cpSpaceGetIterations (space : cpSpace) return Interfaces.C.int;
+   function GetIterations (space : cpSpace) return Interfaces.C.int;
    --  
-   pragma Import (C, cpSpaceGetIterations, "cpSpaceGetIterations");
+   pragma Import (C, GetIterations, "cpSpaceGetIterations");
 
-   procedure cpSpaceSetIterations (space : cpSpace; iterations : Interfaces.C.int);
+   procedure SetIterations (space : cpSpace; iterations : Interfaces.C.int);
    --  
-   pragma Import (C, cpSpaceSetIterations, "cpSpaceSetIterations");
+   pragma Import (C, SetIterations, "cpSpaceSetIterations");
 
-   function cpSpaceGetGravity (space : cpSpace) return cpVect;
+   function GetGravity (space : cpSpace) return cpVect;
    --  
-   pragma Import (C, cpSpaceGetGravity, "cpSpaceGetGravity");
+   pragma Import (C, GetGravity, "cpSpaceGetGravity");
 
-   procedure cpSpaceSetGravity (space : cpSpace; gravity : cpVect);
+   procedure SetGravity (space : cpSpace; gravity : cpVect);
    --  
-   pragma Import (C, cpSpaceSetGravity, "cpSpaceSetGravity");
+   pragma Import (C, SetGravity, "cpSpaceSetGravity");
 
-   function cpSpaceGetDamping (space : cpSpace) return cpFloat;
+   function GetDamping (space : cpSpace) return cpFloat;
    --  
-   pragma Import (C, cpSpaceGetDamping, "cpSpaceGetDamping");
+   pragma Import (C, GetDamping, "cpSpaceGetDamping");
 
-   procedure cpSpaceSetDamping (space : cpSpace; damping : cpFloat);
+   procedure SetDamping (space : cpSpace; damping : cpFloat);
    --  
-   pragma Import (C, cpSpaceSetDamping, "cpSpaceSetDamping");
+   pragma Import (C, SetDamping, "cpSpaceSetDamping");
 
-   function cpSpaceGetIdleSpeedThreshold (space : cpSpace) return cpFloat;
+   function GetIdleSpeedThreshold (space : cpSpace) return cpFloat;
    --  
-   pragma Import (C, cpSpaceGetIdleSpeedThreshold, "cpSpaceGetIdleSpeedThreshold");
+   pragma Import (C, GetIdleSpeedThreshold, "cpSpaceGetIdleSpeedThreshold");
 
-   procedure cpSpaceSetIdleSpeedThreshold (space : cpSpace; idleSpeedThreshold : cpFloat);
+   procedure SetIdleSpeedThreshold (space : cpSpace; idleSpeedThreshold : cpFloat);
    --  
-   pragma Import (C, cpSpaceSetIdleSpeedThreshold, "cpSpaceSetIdleSpeedThreshold");
+   pragma Import (C, SetIdleSpeedThreshold, "cpSpaceSetIdleSpeedThreshold");
 
-   function cpSpaceGetSleepTimeThreshold (space : cpSpace) return cpFloat;
+   function GetSleepTimeThreshold (space : cpSpace) return cpFloat;
    --  
-   pragma Import (C, cpSpaceGetSleepTimeThreshold, "cpSpaceGetSleepTimeThreshold");
+   pragma Import (C, GetSleepTimeThreshold, "cpSpaceGetSleepTimeThreshold");
 
-   procedure cpSpaceSetSleepTimeThreshold (space : cpSpace; sleepTimeThreshold : cpFloat);
+   procedure SetSleepTimeThreshold (space : cpSpace; sleepTimeThreshold : cpFloat);
    --  
-   pragma Import (C, cpSpaceSetSleepTimeThreshold, "cpSpaceSetSleepTimeThreshold");
+   pragma Import (C, SetSleepTimeThreshold, "cpSpaceSetSleepTimeThreshold");
 
-   function cpSpaceGetCollisionSlop (space : cpSpace) return cpFloat;
+   function GetCollisionSlop (space : cpSpace) return cpFloat;
    --  
-   pragma Import (C, cpSpaceGetCollisionSlop, "cpSpaceGetCollisionSlop");
+   pragma Import (C, GetCollisionSlop, "cpSpaceGetCollisionSlop");
 
-   procedure cpSpaceSetCollisionSlop (space : cpSpace; collisionSlop : cpFloat);
+   procedure SetCollisionSlop (space : cpSpace; collisionSlop : cpFloat);
    --  
-   pragma Import (C, cpSpaceSetCollisionSlop, "cpSpaceSetCollisionSlop");
+   pragma Import (C, SetCollisionSlop, "cpSpaceSetCollisionSlop");
 
-   function cpSpaceGetCollisionBias (space : cpSpace) return cpFloat;
+   function GetCollisionBias (space : cpSpace) return cpFloat;
    --  
-   pragma Import (C, cpSpaceGetCollisionBias, "cpSpaceGetCollisionBias");
+   pragma Import (C, GetCollisionBias, "cpSpaceGetCollisionBias");
 
-   procedure cpSpaceSetCollisionBias (space : cpSpace; collisionBias : cpFloat);
+   procedure SetCollisionBias (space : cpSpace; collisionBias : cpFloat);
    --  
-   pragma Import (C, cpSpaceSetCollisionBias, "cpSpaceSetCollisionBias");
+   pragma Import (C, SetCollisionBias, "cpSpaceSetCollisionBias");
 
-   function cpSpaceGetCollisionPersistence (space : cpSpace) return cpTimestamp;
+   function GetCollisionPersistence (space : cpSpace) return cpTimestamp;
    --  
-   pragma Import (C, cpSpaceGetCollisionPersistence, "cpSpaceGetCollisionPersistence");
+   pragma Import (C, GetCollisionPersistence, "cpSpaceGetCollisionPersistence");
 
-   procedure cpSpaceSetCollisionPersistence (space : cpSpace; collisionPersistence : cpTimestamp);
+   procedure SetCollisionPersistence (space : cpSpace; collisionPersistence : cpTimestamp);
    --  
-   pragma Import (C, cpSpaceSetCollisionPersistence, "cpSpaceSetCollisionPersistence");
+   pragma Import (C, SetCollisionPersistence, "cpSpaceSetCollisionPersistence");
 
-   function cpSpaceGetUserData (space : cpSpace) return cpDataPointer;
+   function GetUserData (space : cpSpace) return cpDataPointer;
    --  
-   pragma Import (C, cpSpaceGetUserData, "cpSpaceGetUserData");
+   pragma Import (C, GetUserData, "cpSpaceGetUserData");
 
-   procedure cpSpaceSetUserData (space : cpSpace; userData : cpDataPointer);
+   procedure SetUserData (space : cpSpace; userData : cpDataPointer);
    --  
-   pragma Import (C, cpSpaceSetUserData, "cpSpaceSetUserData");
+   pragma Import (C, SetUserData, "cpSpaceSetUserData");
 
-   function cpSpaceGetStaticBody (space : cpSpace) return cpBody;
+   function GetStaticBody (space : cpSpace) return cpBody;
    --  
-   pragma Import (C, cpSpaceGetStaticBody, "cpSpaceGetStaticBody");
+   pragma Import (C, GetStaticBody, "cpSpaceGetStaticBody");
 
-   function cpSpaceGetCurrentTimeStep (space : cpSpace) return cpFloat;
+   function GetCurrentTimeStep (space : cpSpace) return cpFloat;
    --  
-   pragma Import (C, cpSpaceGetCurrentTimeStep, "cpSpaceGetCurrentTimeStep");
+   pragma Import (C, GetCurrentTimeStep, "cpSpaceGetCurrentTimeStep");
 
-   function cpSpaceIsLocked (space : cpSpace) return cpBool;
+   function IsLocked (space : cpSpace) return cpBool;
    --  
-   pragma Import (C, cpSpaceIsLocked, "cpSpaceIsLocked");
+   pragma Import (C, IsLocked, "cpSpaceIsLocked");
 
-   function cpSpaceAddDefaultCollisionHandler (space : cpSpace) return access cpCollisionHandler;
+   function AddDefaultCollisionHandler (space : cpSpace) return access cpCollisionHandler;
    --  
-   pragma Import (C, cpSpaceAddDefaultCollisionHandler, "cpSpaceAddDefaultCollisionHandler");
+   pragma Import (C, AddDefaultCollisionHandler, "cpSpaceAddDefaultCollisionHandler");
 
-   function cpSpaceAddCollisionHandler (space : cpSpace; a : cpCollisionType; b : cpCollisionType) return access cpCollisionHandler;
+   function AddCollisionHandler (space : cpSpace; a : cpCollisionType; b : cpCollisionType) return access cpCollisionHandler;
    --  
-   pragma Import (C, cpSpaceAddCollisionHandler, "cpSpaceAddCollisionHandler");
+   pragma Import (C, AddCollisionHandler, "cpSpaceAddCollisionHandler");
 
-   function cpSpaceAddWildcardHandler (space : cpSpace; type_p : cpCollisionType) return access cpCollisionHandler;
+   function AddWildcardHandler (space : cpSpace; type_p : cpCollisionType) return access cpCollisionHandler;
    --  
-   pragma Import (C, cpSpaceAddWildcardHandler, "cpSpaceAddWildcardHandler");
+   pragma Import (C, AddWildcardHandler, "cpSpaceAddWildcardHandler");
 
-   function cpSpaceAddShape (space : cpSpace; shape : cpShape) return cpShape;
+   function AddShape (space : cpSpace; shape : cpShape) return cpShape;
    --  
-   pragma Import (C, cpSpaceAddShape, "cpSpaceAddShape");
+   pragma Import (C, AddShape, "cpSpaceAddShape");
 
-   function cpSpaceAddBody (space : cpSpace; body_p : cpBody) return cpBody;
+   function AddBody (space : cpSpace; body_p : cpBody) return cpBody;
    --  
-   pragma Import (C, cpSpaceAddBody, "cpSpaceAddBody");
+   pragma Import (C, AddBody, "cpSpaceAddBody");
 
-   function cpSpaceAddConstraint (space : cpSpace; constraint : cpConstraint) return cpConstraint;
+   function AddConstraint (space : cpSpace; constraint : cpConstraint) return cpConstraint;
    --  
-   pragma Import (C, cpSpaceAddConstraint, "cpSpaceAddConstraint");
+   pragma Import (C, AddConstraint, "cpSpaceAddConstraint");
 
-   procedure cpSpaceRemoveShape (space : cpSpace; shape : cpShape);
+   procedure RemoveShape (space : cpSpace; shape : cpShape);
    --  
-   pragma Import (C, cpSpaceRemoveShape, "cpSpaceRemoveShape");
+   pragma Import (C, RemoveShape, "cpSpaceRemoveShape");
 
-   procedure cpSpaceRemoveBody (space : cpSpace; body_p : cpBody);
+   procedure RemoveBody (space : cpSpace; body_p : cpBody);
    --  
-   pragma Import (C, cpSpaceRemoveBody, "cpSpaceRemoveBody");
+   pragma Import (C, RemoveBody, "cpSpaceRemoveBody");
 
-   procedure cpSpaceRemoveConstraint (space : cpSpace; constraint : cpConstraint);
+   procedure RemoveConstraint (space : cpSpace; constraint : cpConstraint);
    --  
-   pragma Import (C, cpSpaceRemoveConstraint, "cpSpaceRemoveConstraint");
+   pragma Import (C, RemoveConstraint, "cpSpaceRemoveConstraint");
 
-   function cpSpaceContainsShape (space : cpSpace; shape : cpShape) return cpBool;
+   function ContainsShape (space : cpSpace; shape : cpShape) return cpBool;
    --  
-   pragma Import (C, cpSpaceContainsShape, "cpSpaceContainsShape");
+   pragma Import (C, ContainsShape, "cpSpaceContainsShape");
 
-   function cpSpaceContainsBody (space : cpSpace; body_p : cpBody) return cpBool;
+   function ContainsBody (space : cpSpace; body_p : cpBody) return cpBool;
    --  
-   pragma Import (C, cpSpaceContainsBody, "cpSpaceContainsBody");
+   pragma Import (C, ContainsBody, "cpSpaceContainsBody");
 
-   function cpSpaceContainsConstraint (space : cpSpace; constraint : cpConstraint) return cpBool;
+   function ContainsConstraint (space : cpSpace; constraint : cpConstraint) return cpBool;
    --  
-   pragma Import (C, cpSpaceContainsConstraint, "cpSpaceContainsConstraint");
+   pragma Import (C, ContainsConstraint, "cpSpaceContainsConstraint");
 
-   function cpSpaceAddPostStepCallback (space : cpSpace; func : cpPostStepFunc; key : System.Address; data : System.Address) return cpBool;
+   function AddPostStepCallback (space : cpSpace; func : cpPostStepFunc; key : System.Address; data : System.Address) return cpBool;
    --  
-   pragma Import (C, cpSpaceAddPostStepCallback, "cpSpaceAddPostStepCallback");
+   pragma Import (C, AddPostStepCallback, "cpSpaceAddPostStepCallback");
 
-   procedure cpSpacePointQuery (space : cpSpace; point : cpVect; maxDistance : cpFloat; filter : cpShapeFilter; func : cpSpacePointQueryFunc; data : System.Address);
+   procedure PointQuery (space : cpSpace; point : cpVect; maxDistance : cpFloat; filter : cpShapeFilter; func : cpSpacePointQueryFunc; data : System.Address);
    --  
-   pragma Import (C, cpSpacePointQuery, "cpSpacePointQuery");
+   pragma Import (C, PointQuery, "cpSpacePointQuery");
 
-   function cpSpacePointQueryNearest (space : cpSpace; point : cpVect; maxDistance : cpFloat; filter : cpShapeFilter; out_p : cpPointQueryInfo) return cpShape;
+   function PointQueryNearest (space : cpSpace; point : cpVect; maxDistance : cpFloat; filter : cpShapeFilter; out_p : cpPointQueryInfo) return cpShape;
    --  
-   pragma Import (C, cpSpacePointQueryNearest, "cpSpacePointQueryNearest");
+   pragma Import (C, PointQueryNearest, "cpSpacePointQueryNearest");
 
-   procedure cpSpaceSegmentQuery (space : cpSpace; start : cpVect; end_p : cpVect; radius : cpFloat; filter : cpShapeFilter; func : cpSpaceSegmentQueryFunc; data : System.Address);
+   procedure SegmentQuery (space : cpSpace; start : cpVect; end_p : cpVect; radius : cpFloat; filter : cpShapeFilter; func : cpSpaceSegmentQueryFunc; data : System.Address);
    --  
-   pragma Import (C, cpSpaceSegmentQuery, "cpSpaceSegmentQuery");
+   pragma Import (C, SegmentQuery, "cpSpaceSegmentQuery");
 
-   function cpSpaceSegmentQueryFirst (space : cpSpace; start : cpVect; end_p : cpVect; radius : cpFloat; filter : cpShapeFilter; out_p : cpSegmentQueryInfo) return cpShape;
+   function SegmentQueryFirst (space : cpSpace; start : cpVect; end_p : cpVect; radius : cpFloat; filter : cpShapeFilter; out_p : cpSegmentQueryInfo) return cpShape;
    --  
-   pragma Import (C, cpSpaceSegmentQueryFirst, "cpSpaceSegmentQueryFirst");
+   pragma Import (C, SegmentQueryFirst, "cpSpaceSegmentQueryFirst");
 
-   procedure cpSpaceBBQuery (space : cpSpace; bb : cpBB; filter : cpShapeFilter; func : cpSpaceBBQueryFunc; data : System.Address);
+   procedure BBQuery (space : cpSpace; bb : cpBB; filter : cpShapeFilter; func : cpSpaceBBQueryFunc; data : System.Address);
    --  
-   pragma Import (C, cpSpaceBBQuery, "cpSpaceBBQuery");
+   pragma Import (C, BBQuery, "cpSpaceBBQuery");
 
-   function cpSpaceShapeQuery (space : cpSpace; shape : cpShape; func : cpSpaceShapeQueryFunc; data : System.Address) return cpBool;
+   function ShapeQuery (space : cpSpace; shape : cpShape; func : cpSpaceShapeQueryFunc; data : System.Address) return cpBool;
    --  
-   pragma Import (C, cpSpaceShapeQuery, "cpSpaceShapeQuery");
+   pragma Import (C, ShapeQuery, "cpSpaceShapeQuery");
 
-   procedure cpSpaceEachBody (space : cpSpace; func : cpSpaceBodyIteratorFunc; data : System.Address);
+   procedure EachBody (space : cpSpace; func : cpSpaceBodyIteratorFunc; data : System.Address);
    --  
-   pragma Import (C, cpSpaceEachBody, "cpSpaceEachBody");
+   pragma Import (C, EachBody, "cpSpaceEachBody");
 
-   procedure cpSpaceEachShape (space : cpSpace; func : cpSpaceShapeIteratorFunc; data : System.Address);
+   procedure EachShape (space : cpSpace; func : cpSpaceShapeIteratorFunc; data : System.Address);
    --  
-   pragma Import (C, cpSpaceEachShape, "cpSpaceEachShape");
+   pragma Import (C, EachShape, "cpSpaceEachShape");
 
-   procedure cpSpaceEachConstraint (space : cpSpace; func : cpSpaceConstraintIteratorFunc; data : System.Address);
+   procedure EachConstraint (space : cpSpace; func : cpSpaceConstraintIteratorFunc; data : System.Address);
    --  
-   pragma Import (C, cpSpaceEachConstraint, "cpSpaceEachConstraint");
+   pragma Import (C, EachConstraint, "cpSpaceEachConstraint");
 
-   procedure cpSpaceReindexStatic (space : cpSpace);
+   procedure ReindexStatic (space : cpSpace);
    --  
-   pragma Import (C, cpSpaceReindexStatic, "cpSpaceReindexStatic");
+   pragma Import (C, ReindexStatic, "cpSpaceReindexStatic");
 
-   procedure cpSpaceReindexShape (space : cpSpace; shape : cpShape);
+   procedure ReindexShape (space : cpSpace; shape : cpShape);
    --  
-   pragma Import (C, cpSpaceReindexShape, "cpSpaceReindexShape");
+   pragma Import (C, ReindexShape, "cpSpaceReindexShape");
 
-   procedure cpSpaceReindexShapesForBody (space : cpSpace; body_p : cpBody);
+   procedure ReindexShapesForBody (space : cpSpace; body_p : cpBody);
    --  
-   pragma Import (C, cpSpaceReindexShapesForBody, "cpSpaceReindexShapesForBody");
+   pragma Import (C, ReindexShapesForBody, "cpSpaceReindexShapesForBody");
 
-   procedure cpSpaceUseSpatialHash (space : cpSpace; dim : cpFloat; count : Interfaces.C.int);
+   procedure UseSpatialHash (space : cpSpace; dim : cpFloat; count : Interfaces.C.int);
    --  
-   pragma Import (C, cpSpaceUseSpatialHash, "cpSpaceUseSpatialHash");
+   pragma Import (C, UseSpatialHash, "cpSpaceUseSpatialHash");
 
-   procedure cpSpaceStep (space : cpSpace; dt : cpFloat);
+   procedure Step (space : cpSpace; dt : cpFloat);
    --  
-   pragma Import (C, cpSpaceStep, "cpSpaceStep");
+   pragma Import (C, Step, "cpSpaceStep");
 
-   procedure cpSpaceDebugDraw (space : cpSpace; options : access cpSpaceDebugDrawOptions);
+   procedure DebugDraw (space : cpSpace; options : access cpSpaceDebugDrawOptions);
    --  
-   pragma Import (C, cpSpaceDebugDraw, "cpSpaceDebugDraw");
+   pragma Import (C, DebugDraw, "cpSpaceDebugDraw");
 
 end Chipmunk.Spaces;

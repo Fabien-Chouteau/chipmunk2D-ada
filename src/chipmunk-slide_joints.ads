@@ -8,48 +8,48 @@ is
    --  
    pragma Import (C, cpConstraintIsSlideJoint, "cpConstraintIsSlideJoint");
 
-   function cpSlideJointAlloc return cpSlideJoint;
+   function Alloc return cpSlideJoint;
    --  
-   pragma Import (C, cpSlideJointAlloc, "cpSlideJointAlloc");
+   pragma Import (C, Alloc, "cpSlideJointAlloc");
 
-   function cpSlideJointInit (joint : cpSlideJoint; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; min : cpFloat; max : cpFloat) return cpSlideJoint;
+   function Init (joint : cpSlideJoint; a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; min : cpFloat; max : cpFloat) return cpSlideJoint;
    --  
-   pragma Import (C, cpSlideJointInit, "cpSlideJointInit");
+   pragma Import (C, Init, "cpSlideJointInit");
 
-   function cpSlideJointNew (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; min : cpFloat; max : cpFloat) return cpConstraint;
+   function NewSlideJoint (a : cpBody; b : cpBody; anchorA : cpVect; anchorB : cpVect; min : cpFloat; max : cpFloat) return cpConstraint;
    --  
-   pragma Import (C, cpSlideJointNew, "cpSlideJointNew");
+   pragma Import (C, NewSlideJoint, "cpSlideJointNew");
 
-   function cpSlideJointGetAnchorA (constraint : cpConstraint) return cpVect;
+   function GetAnchorA (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpSlideJointGetAnchorA, "cpSlideJointGetAnchorA");
+   pragma Import (C, GetAnchorA, "cpSlideJointGetAnchorA");
 
-   procedure cpSlideJointSetAnchorA (constraint : cpConstraint; anchorA : cpVect);
+   procedure SetAnchorA (constraint : cpConstraint; anchorA : cpVect);
    --  
-   pragma Import (C, cpSlideJointSetAnchorA, "cpSlideJointSetAnchorA");
+   pragma Import (C, SetAnchorA, "cpSlideJointSetAnchorA");
 
-   function cpSlideJointGetAnchorB (constraint : cpConstraint) return cpVect;
+   function GetAnchorB (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpSlideJointGetAnchorB, "cpSlideJointGetAnchorB");
+   pragma Import (C, GetAnchorB, "cpSlideJointGetAnchorB");
 
-   procedure cpSlideJointSetAnchorB (constraint : cpConstraint; anchorB : cpVect);
+   procedure SetAnchorB (constraint : cpConstraint; anchorB : cpVect);
    --  
-   pragma Import (C, cpSlideJointSetAnchorB, "cpSlideJointSetAnchorB");
+   pragma Import (C, SetAnchorB, "cpSlideJointSetAnchorB");
 
-   function cpSlideJointGetMin (constraint : cpConstraint) return cpFloat;
+   function GetMin (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpSlideJointGetMin, "cpSlideJointGetMin");
+   pragma Import (C, GetMin, "cpSlideJointGetMin");
 
-   procedure cpSlideJointSetMin (constraint : cpConstraint; min : cpFloat);
+   procedure SetMin (constraint : cpConstraint; min : cpFloat);
    --  
-   pragma Import (C, cpSlideJointSetMin, "cpSlideJointSetMin");
+   pragma Import (C, SetMin, "cpSlideJointSetMin");
 
-   function cpSlideJointGetMax (constraint : cpConstraint) return cpFloat;
+   function GetMax (constraint : cpConstraint) return cpFloat;
    --  
-   pragma Import (C, cpSlideJointGetMax, "cpSlideJointGetMax");
+   pragma Import (C, GetMax, "cpSlideJointGetMax");
 
-   procedure cpSlideJointSetMax (constraint : cpConstraint; max : cpFloat);
+   procedure SetMax (constraint : cpConstraint; max : cpFloat);
    --  
-   pragma Import (C, cpSlideJointSetMax, "cpSlideJointSetMax");
+   pragma Import (C, SetMax, "cpSlideJointSetMax");
 
 end Chipmunk.Slide_Joints;

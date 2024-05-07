@@ -8,40 +8,40 @@ is
    --  
    pragma Import (C, cpConstraintIsGrooveJoint, "cpConstraintIsGrooveJoint");
 
-   function cpGrooveJointAlloc return cpGrooveJoint;
+   function Alloc return cpGrooveJoint;
    --  
-   pragma Import (C, cpGrooveJointAlloc, "cpGrooveJointAlloc");
+   pragma Import (C, Alloc, "cpGrooveJointAlloc");
 
-   function cpGrooveJointInit (joint : cpGrooveJoint; a : cpBody; b : cpBody; groove_a : cpVect; groove_b : cpVect; anchorB : cpVect) return cpGrooveJoint;
+   function Init (joint : cpGrooveJoint; a : cpBody; b : cpBody; groove_a : cpVect; groove_b : cpVect; anchorB : cpVect) return cpGrooveJoint;
    --  
-   pragma Import (C, cpGrooveJointInit, "cpGrooveJointInit");
+   pragma Import (C, Init, "cpGrooveJointInit");
 
-   function cpGrooveJointNew (a : cpBody; b : cpBody; groove_a : cpVect; groove_b : cpVect; anchorB : cpVect) return cpConstraint;
+   function NewGrooveJoint (a : cpBody; b : cpBody; groove_a : cpVect; groove_b : cpVect; anchorB : cpVect) return cpConstraint;
    --  
-   pragma Import (C, cpGrooveJointNew, "cpGrooveJointNew");
+   pragma Import (C, NewGrooveJoint, "cpGrooveJointNew");
 
-   function cpGrooveJointGetGrooveA (constraint : cpConstraint) return cpVect;
+   function GetGrooveA (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpGrooveJointGetGrooveA, "cpGrooveJointGetGrooveA");
+   pragma Import (C, GetGrooveA, "cpGrooveJointGetGrooveA");
 
-   procedure cpGrooveJointSetGrooveA (constraint : cpConstraint; grooveA : cpVect);
+   procedure SetGrooveA (constraint : cpConstraint; grooveA : cpVect);
    --  
-   pragma Import (C, cpGrooveJointSetGrooveA, "cpGrooveJointSetGrooveA");
+   pragma Import (C, SetGrooveA, "cpGrooveJointSetGrooveA");
 
-   function cpGrooveJointGetGrooveB (constraint : cpConstraint) return cpVect;
+   function GetGrooveB (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpGrooveJointGetGrooveB, "cpGrooveJointGetGrooveB");
+   pragma Import (C, GetGrooveB, "cpGrooveJointGetGrooveB");
 
-   procedure cpGrooveJointSetGrooveB (constraint : cpConstraint; grooveB : cpVect);
+   procedure SetGrooveB (constraint : cpConstraint; grooveB : cpVect);
    --  
-   pragma Import (C, cpGrooveJointSetGrooveB, "cpGrooveJointSetGrooveB");
+   pragma Import (C, SetGrooveB, "cpGrooveJointSetGrooveB");
 
-   function cpGrooveJointGetAnchorB (constraint : cpConstraint) return cpVect;
+   function GetAnchorB (constraint : cpConstraint) return cpVect;
    --  
-   pragma Import (C, cpGrooveJointGetAnchorB, "cpGrooveJointGetAnchorB");
+   pragma Import (C, GetAnchorB, "cpGrooveJointGetAnchorB");
 
-   procedure cpGrooveJointSetAnchorB (constraint : cpConstraint; anchorB : cpVect);
+   procedure SetAnchorB (constraint : cpConstraint; anchorB : cpVect);
    --  
-   pragma Import (C, cpGrooveJointSetAnchorB, "cpGrooveJointSetAnchorB");
+   pragma Import (C, SetAnchorB, "cpGrooveJointSetAnchorB");
 
 end Chipmunk.Groove_Joints;

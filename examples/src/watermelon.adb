@@ -15,7 +15,6 @@ with Resources;
 with Examples_Config;
 
 with Ada.Containers.Doubly_Linked_Lists;
-with Ada.Calendar;
 with Ada.Real_Time; use Ada.Real_Time;
 with Ada.Numerics.Discrete_Random;
 
@@ -26,7 +25,7 @@ procedure Watermelon is
    package Game_Resources
    is new Resources (Examples_Config.Crate_Name);
 
-   Space : constant cpSpace := cpSpaceNew;
+   Space : constant cpSpace := NewSpace;
 
    Width  : constant := 800;
    Height : constant := 600;
@@ -126,16 +125,16 @@ procedure Watermelon is
       Bod : cpBody;
       Shape : cpShape;
    begin
-      Bod := cpBodyNew (Mass (Kind), Moment (Kind));
-      cpBodySetPosition (Bod, (X, Y));
-      Bod := cpSpaceAddBody (Space, Bod);
+      Bod := NewBody (Mass (Kind), Moment (Kind));
+      SetPosition (Bod, (X, Y));
+      Bod := AddBody (Space, Bod);
 
       Shape := cpCircleShapeNew (Bod, Radius (Kind), (0.0, 0.0));
-      cpShapeSetElasticity (Shape, Elasticity (Kind));
-      cpShapeSetFriction (Shape, Friction (Kind));
-      cpShapeSetCollisionType (Shape, Kind'Enum_Rep);
+      SetElasticity (Shape, Elasticity (Kind));
+      SetFriction (Shape, Friction (Kind));
+      SetCollisionType (Shape, Kind'Enum_Rep);
 
-      Shape := cpSpaceAddShape (Space, Shape);
+      Shape := AddShape (Space, Shape);
       pragma Unreferenced (Shape);
    end Add_Object;
 
@@ -154,18 +153,17 @@ procedure Watermelon is
       Segment_Body : cpBody;
       Segment_Shape : cpShape;
    begin
-      Segment_Body := cpBodyNew (0.0, Infinity);
-      cpBodySetType (Segment_Body, Static);
-      cpBodySetPosition (Segment_Body, (0.0, 0.0));
-      Segment_Body := cpSpaceAddBody (Space, Segment_Body);
+      Segment_Body := NewBody (0.0, Infinity);
+      SetType (Segment_Body, Static);
+      SetPosition (Segment_Body, (0.0, 0.0));
+      Segment_Body := AddBody (Space, Segment_Body);
 
-      Segment_Shape := cpSegmentShapeNew
-        (Segment_Body, A, B, Radius);
-      cpShapeSetElasticity (Segment_Shape, 0.5);
-      cpShapeSetFriction (Segment_Shape, 100.0);
-      cpShapeSetCollisionType (Segment_Shape, Object_Kind'Last'Enum_Rep + 1);
+      Segment_Shape := cpSegmentShapeNew (Segment_Body, A, B, Radius);
+      SetElasticity (Segment_Shape, 0.5);
+      SetFriction (Segment_Shape, 100.0);
+      SetCollisionType (Segment_Shape, Object_Kind'Last'Enum_Rep + 1);
 
-      Segment_Shape := cpSpaceAddShape (Space, Segment_Shape);
+      Segment_Shape := AddShape (Space, Segment_Shape);
 
       Segments.Append ((A, B, Radius, Segment_Body));
    end Add_Segment;
@@ -187,10 +185,10 @@ procedure Watermelon is
       use Chipmunk.Arbiters;
       A, B : aliased cpShape;
    begin
-      cpArbiterGetShapes (Arb, A'Access, B'Access);
+      GetShapes (Arb, A'Access, B'Access);
       declare
          K : constant Object_Kind :=
-           Object_Kind'Enum_Val (cpShapeGetCollisionType (A));
+           Object_Kind'Enum_Val (GetCollisionType (A));
       begin
          Bodies_To_Merge.Append ((K, A, B));
       end;
@@ -228,16 +226,16 @@ procedure Watermelon is
 
    procedure For_Each_Shape (Shape : cpShape; Data : cpDataPointer) is
       pragma Unreferenced (Data);
-      Bod : constant cpBody := cpShapeGetBody (Shape);
-      Pos : constant cpVect := cpBodyGetPosition (Bod);
+      Bod : constant cpBody := GetBody (Shape);
+      Pos : constant cpVect := GetPosition (Bod);
       Kind : constant Object_Kind :=
-        Object_Kind'Enum_Val (cpShapeGetCollisionType (Shape));
+        Object_Kind'Enum_Val (GetCollisionType (Shape));
    begin
-      if Pos.Y < 0.0 then
+      if Pos.Y < -20.0 then
          Gameover := True;
       end if;
 
-      Draw_Object (Kind, Pos, cpBodyGetAngle (Bod));
+      Draw_Object (Kind, Pos, GetAngle (Bod));
    end For_Each_Shape;
 
    function To_Debug (Pos : cpVect) return Raylib.Vector2 is
@@ -276,16 +274,16 @@ procedure Watermelon is
       Random_Object.Reset (Obj_Gen);
 
       --  Cleanup space
-      cpSpaceEachShape (Space, List_Each_Shape'Unrestricted_Access,
+      EachShape (Space, List_Each_Shape'Unrestricted_Access,
                         System.Null_Address);
       for Shape of Shape_List loop
          declare
-            Bod : constant cpBody := cpShapeGetBody (Shape);
+            Bod : constant cpBody := GetBody (Shape);
          begin
-            cpSpaceRemoveShape (Space, Shape);
-            cpSpaceRemoveBody (Space, Bod);
-            cpShapeDestroy (Shape);
-            cpBodyDestroy (Bod);
+            RemoveShape (Space, Shape);
+            RemoveBody (Space, Bod);
+            Destroy (Shape);
+            Destroy (Bod);
          end;
       end loop;
 
@@ -309,9 +307,9 @@ begin
 
    Raylib.InitWindow (Width, Height, "Watermelon Chipmunk Example");
 
-   cpSpaceSetIterations (Space, 10);
-   cpSpaceSetGravity (Space, (0.0, -900.0));
-   cpSpaceSetSleepTimeThreshold (Space, 0.5);
+   SetIterations (Space, 10);
+   SetGravity (Space, (0.0, -900.0));
+   SetSleepTimeThreshold (Space, 0.5);
 
    for K in Object_Kind loop
       Images (K) := Raylib.LoadImage
@@ -320,7 +318,7 @@ begin
 
       declare
          Test : constant access cpCollisionHandler :=
-           cpSpaceAddCollisionHandler (Space, K'Enum_Rep, K'Enum_Rep);
+           AddCollisionHandler (Space, K'Enum_Rep, K'Enum_Rep);
       begin
          Test.postSolveFunc := PostSolveFunc'Unrestricted_Access;
       end;
@@ -362,24 +360,22 @@ begin
 
       if not Gameover then
          Bodies_To_Merge.Clear;
-         cpSpaceStep (Space, 1.0 / 60.0);
+         Step (Space, 1.0 / 60.0);
 
          for Elt of Bodies_To_Merge loop
             declare
-               AB : constant cpBody := cpShapeGetBody (Elt.A);
-               BB : constant cpBody := cpShapeGetBody (Elt.B);
+               AB : constant cpBody := GetBody (Elt.A);
+               BB : constant cpBody := GetBody (Elt.B);
 
-               A_Pos : constant cpVect := cpBodyGetPosition (AB);
-               B_Pos : constant cpVect := cpBodyGetPosition (BB);
+               A_Pos : constant cpVect := GetPosition (AB);
+               B_Pos : constant cpVect := GetPosition (BB);
             begin
-               if cpSpaceContainsBody (Space, AB)
-                 and then
-                   cpSpaceContainsBody (Space, BB)
+               if ContainsBody (Space, AB) and then ContainsBody (Space, BB)
                then
-                  cpSpaceRemoveShape (Space, Elt.A);
-                  cpSpaceRemoveShape (Space, Elt.B);
-                  cpSpaceRemoveBody (Space, AB);
-                  cpSpaceRemoveBody (Space, BB);
+                  RemoveShape (Space, Elt.A);
+                  RemoveShape (Space, Elt.B);
+                  RemoveBody (Space, AB);
+                  RemoveBody (Space, BB);
 
                   Score := Score + Points (Elt.Kind);
 
@@ -426,8 +422,8 @@ begin
          10,
          Raylib.WHITE);
 
-      cpSpaceEachShape (Space, For_Each_Shape'Unrestricted_Access,
-                        System.Null_Address);
+      EachShape (Space, For_Each_Shape'Unrestricted_Access,
+                 System.Null_Address);
 
       DrawText (text => "Score:" & Score'Img,
                 posX => 0,
