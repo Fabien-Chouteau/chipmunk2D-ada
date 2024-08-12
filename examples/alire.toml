@@ -18,10 +18,7 @@ chipmunk2d = "*"
 chipmunk2d = { path = "../" }
 
 [[depends-on]]
-raylib = "~0.1.0-dev"
-
-[[pins]]
-raylib = { url='https://github.com/Fabien-Chouteau/raylib-ada' }
+raylib = "^1"
 
 [[depends-on]]
 resources = "~0.1.0"

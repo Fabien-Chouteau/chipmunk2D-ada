@@ -1,5 +1,5 @@
 name = "chipmunk2d"
-description = ""
+description = "Ada bindings for Chipmunk2D"
 version = "0.1.0-dev"
 
 authors = ["Fabien Chouteau"]
@@ -7,4 +7,7 @@ maintainers = ["Fabien Chouteau <fabien.chouteau@gmail.com>"]
 maintainers-logins = ["Fabien-Chouteau"]
 licenses = "MIT"
 website = ""
-tags = []
+tags = ["gamedev", "binding"]
+
+[[depends-on]]
+libchipmunk = "^7.0.3"
