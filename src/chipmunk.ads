@@ -1,4 +1,5 @@
-with Interfaces.C; use Interfaces.C;
+with Interfaces.C;
+use Interfaces.C;
 with System;
 
 package Chipmunk
@@ -17,8 +18,7 @@ is
    subtype cpTimestamp is Interfaces.C.unsigned;
    subtype cpBitmask is Interfaces.C.unsigned;
 
-   type cpBodyType is (Dynamic, Kinematic, Static)
-     with Convention => C;
+   type cpBodyType is (Dynamic, Kinematic, Static) with Convention => C;
 
    type cpBody is new System.Address;
 
@@ -45,39 +45,34 @@ is
 
    type cpContactPointSet is new System.Address;
 
-   type cpCollisionBeginFunc
-   is access function (Arb : cpArbiter;
-                       Space : cpSpace;
-                       User_Data : cpDataPointer)
-                       return cpBool
-     with Convention => C;
-   --  Collision begin event function callback type.
-   --  Returning false from a begin callback causes the collision to be ignored until
-   --  the the separate callback is called when the objects stop colliding.
+   type cpCollisionBeginFunc is
+     access function
+       (Arb : cpArbiter; Space : cpSpace; User_Data : cpDataPointer)
+        return cpBool
+   with Convention => C;
+   --  Collision begin event function callback type. Returning false from a
+   --  begin callback causes the collision to be ignored until the the separate
+   --  callback is called when the objects stop colliding.
 
+   type cpCollisionPreSolveFunc is
+     access function
+       (Arb : cpArbiter; Space : cpSpace; User_Data : cpDataPointer)
+        return cpBool
+   with Convention => C;
+   --  Collision pre-solve event function callback type. Returning false from
+   --  a pre-step callback causes the collision to be ignored until the next
+   --  step.
 
-   type cpCollisionPreSolveFunc
-   is access function (Arb : cpArbiter;
-                       Space : cpSpace;
-                       User_Data : cpDataPointer)
-                       return cpBool
-     with Convention => C;
---  Collision pre-solve event function callback type.
---  Returning false from a pre-step callback causes the collision to be ignored until the next step.
-
-
-   type cpCollisionPostSolveFunc
-   is access procedure (Arb : cpArbiter;
-                        Space : cpSpace;
-                        User_Data : cpDataPointer)
-     with Convention => C;
+   type cpCollisionPostSolveFunc is
+     access procedure
+       (Arb : cpArbiter; Space : cpSpace; User_Data : cpDataPointer)
+   with Convention => C;
    --  Collision post-solve event function callback type.
 
-   type cpCollisionSeparateFunc
-   is access procedure (Arb : cpArbiter;
-                        Space : cpSpace;
-                        User_Data : cpDataPointer)
-     with Convention => C;
+   type cpCollisionSeparateFunc is
+     access procedure
+       (Arb : cpArbiter; Space : cpSpace; User_Data : cpDataPointer)
+   with Convention => C;
    --  Collision separate event function callback type.
 
    --  Struct that holds function callback pointers to configure custom
@@ -118,7 +113,7 @@ is
       --  collision handler functions.
       userData : cpDataPointer;
    end record
-     with Convention => C_Pass_By_Copy;
+   with Convention => C_Pass_By_Copy;
 
    type cpGroup is new System.Address;
 
@@ -129,50 +124,61 @@ is
    type cpVect is record
       X, Y : cpFloat;
    end record
-     with Convention => C_Pass_By_Copy;
+   with Convention => C_Pass_By_Copy;
 
    type C_cpVect_Array is array (Interfaces.C.unsigned) of cpVect
-     with Convention => C;
+   with Convention => C;
 
    type cpTransform is record
       A, B, C, D, TX, TY : cpFloat;
    end record
-     with Convention => C_Pass_By_Copy;
+   with Convention => C_Pass_By_Copy;
 
    type cpMat2x2 is record
       A, B, C, D : cpFloat;
    end record
-     with Convention => C_Pass_By_Copy;
+   with Convention => C_Pass_By_Copy;
 
    type cpSpaceDebugColor is record
       R, G, B, A : C_float;
    end record
-     with Convention => C_Pass_By_Copy;
+   with Convention => C_Pass_By_Copy;
 
    type cpSpaceDebugDrawFlags is new Interfaces.Unsigned_16;
    DEBUG_DRAW_SHAPES           : constant cpSpaceDebugDrawFlags := 2#0001#;
    DEBUG_DRAW_CONSTRAINTS      : constant cpSpaceDebugDrawFlags := 2#0010#;
    DEBUG_DRAW_COLLISION_POINTS : constant cpSpaceDebugDrawFlags := 2#0100#;
 
-   function cpMomentForCircle (Mass, R1, R2 : cpFloat; Offset : cpVect) return cpFloat;
+   function cpMomentForCircle
+     (Mass, R1, R2 : cpFloat; Offset : cpVect) return cpFloat;
    pragma Import (C, cpMomentForCircle, "cpMomentForCircle");
 
    function cpAreaForCircle (R1, R2 : cpFloat) return cpFloat;
    pragma Import (C, cpAreaForCircle, "cpAreaForCircle");
 
-   function cpMomentForSegment (Mass : cpFloat; A, B : cpVect; Radius : cpFloat) return cpFloat;
+   function cpMomentForSegment
+     (Mass : cpFloat; A, B : cpVect; Radius : cpFloat) return cpFloat;
    pragma Import (C, cpMomentForSegment, "cpMomentForSegment");
 
-   function cpAreaForSegment ( A, B : cpVect; Radius : cpFloat) return cpFloat;
+   function cpAreaForSegment (A, B : cpVect; Radius : cpFloat) return cpFloat;
    pragma Import (C, cpAreaForSegment, "cpAreaForSegment");
 
-   function cpMomentForPoly (Mass : cpFloat; Count : Interfaces.C.int; verts : access C_cpVect_Array; Offset : cpVect; Radius : cpFloat) return cpFloat;
+   function cpMomentForPoly
+     (Mass   : cpFloat;
+      Count  : Interfaces.C.int;
+      verts  : access C_cpVect_Array;
+      Offset : cpVect;
+      Radius : cpFloat) return cpFloat;
    pragma Import (C, cpMomentForPoly, "cpMomentForPoly");
 
-   function cpAreaForPoly (Count : Interfaces.C.int; verts : access C_cpVect_Array; Radius : cpFloat) return cpFloat;
+   function cpAreaForPoly
+     (Count  : Interfaces.C.int;
+      verts  : access C_cpVect_Array;
+      Radius : cpFloat) return cpFloat;
    pragma Import (C, cpAreaForPoly, "cpAreaForSegment");
 
-   function cpCentroidForPoly (Count : Interfaces.C.int; verts : access C_cpVect_Array) return cpVect;
+   function cpCentroidForPoly
+     (Count : Interfaces.C.int; verts : access C_cpVect_Array) return cpVect;
    pragma Import (C, cpCentroidForPoly, "cpCentroidForSegment");
 
    function cpMomentForBox (Mass, Width, Height : cpFloat) return cpFloat;
