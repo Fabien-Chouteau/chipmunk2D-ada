@@ -1,6 +1,6 @@
 name = "chipmunk2d"
 description = "Ada bindings for Chipmunk2D"
-version = "0.1.0-dev"
+version = "0.2.0-dev"
 
 authors = ["Fabien Chouteau"]
 maintainers = ["Fabien Chouteau <fabien.chouteau@gmail.com>"]
