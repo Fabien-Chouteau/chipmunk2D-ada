@@ -1,5 +1,5 @@
-#include "chipmunk.h"
+#include "math.h"
 
-cpFloat cpFloat_inf(void) {
-  return INFINITY;
+double cpFloat_inf(void) {
+  return __builtin_inf();
 }
